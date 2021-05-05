@@ -39,6 +39,33 @@ body {
     font-size: 12px;
 }
 
+.more-filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    background: #ffffff;
+    border: 1px solid #9ba8b0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 60px;
+    line-height: 18px;
+    margin-right: 0;
+    margin-bottom: 16px;
+    min-width: 75px;
+    /* box-shadow: 0 3px 5px rgb(25 32 36 / 16%); */
+    padding: 4px 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.svg-image {
+    width: 15px;
+    height: 15px;
+}
+
 .car-img {
     height: 32px;
     width: 48px;

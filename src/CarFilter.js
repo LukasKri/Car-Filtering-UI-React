@@ -1,10 +1,10 @@
 import React from "react";
 
-const CarButton = ({ imgAddress, carType }) => {
+const CarFilter = ({ imgAddress, carType }) => {
     // const [state, setstate] = useState(false);
 
     const handleClick = (e) => {
-        console.log("This div was clicked.");
+        console.log("Car filter was clicked.");
     };
 
     return (
@@ -15,4 +15,4 @@ const CarButton = ({ imgAddress, carType }) => {
     );
 };
 
-export default CarButton;
+export default CarFilter;
