@@ -1,18 +1,45 @@
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-        "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    /* margin: 0; */
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
+.header {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-bottom: 8px;
+    margin-left: 20px;
 }
 
-/* .car-button {
-    border: solid;
-    margin-right: "4px";
-} */
+.car-filters {
+    margin-left: 20px;
+    display: flex;
+}
+
+.car-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* SITAS SKIRASI REIK BORDER BOX? */
+    justify-content: center;
+    background: #ffffff;
+    border: 1px solid #9ba8b0;
+    border-radius: 4px;
+    cursor: pointer;
+    /* SITAS SKIRASI REIK BORDER BOX? */
+    height: 50px;
+    line-height: 18px;
+    margin: 0px 4px 16px 0px;
+    min-width: 75px;
+    /* box-shadow: 0 3px 5px rgb(25 32 36 / 16%); */
+    padding: 4px 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.car-img {
+    height: 32px;
+    width: 48px;
+}
