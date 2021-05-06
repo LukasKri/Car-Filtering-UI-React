@@ -9,6 +9,7 @@ body {
     font-weight: 700;
     line-height: 18px;
     margin-bottom: 8px;
+    margin-top: 50px;
     margin-left: 20px;
 }
 
@@ -26,6 +27,7 @@ body {
     background: #ffffff;
     border: 1px solid #9ba8b0;
     border-radius: 4px;
+    color: #192024;
     cursor: pointer;
     /* SITAS SKIRASI REIK BORDER BOX? */
     height: 50px;
@@ -37,6 +39,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     font-size: 12px;
+}
+
+.car-filter:hover {
+    border: 1px solid #192024;
 }
 
 .more-filter {
@@ -59,6 +65,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     font-size: 12px;
+}
+
+.more-filter:hover {
+    border: 1px solid #192024;
 }
 
 .svg-image {
