@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const MoreFilter = () => {
+const MoreFilterCard = () => {
     const [isClicked, setIsClicked] = useState(false);
 
     const darkTheme = {
@@ -21,7 +21,7 @@ const MoreFilter = () => {
     return (
         <>
             <div
-                className="more-filter"
+                className="more-filter-card"
                 onClick={handleClick}
                 style={isClicked ? darkTheme : lightTheme}
             >
@@ -42,4 +42,4 @@ const MoreFilter = () => {
     );
 };
 
-export default MoreFilter;
+export default MoreFilterCard;

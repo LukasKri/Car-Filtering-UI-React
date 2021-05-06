@@ -12,7 +12,7 @@ body {
     margin-left: 20px;
 }
 
-.car-filters {
+.car-filter-cards {
     margin-left: 20px;
     display: flex;
 }
@@ -44,7 +44,7 @@ body {
     border: 1px solid #192024;
 }
 
-.more-filter {
+.more-filter-card {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -66,7 +66,7 @@ body {
     font-size: 12px;
 }
 
-.more-filter:hover {
+.more-filter-card:hover {
     border: 1px solid #192024;
 }
 
@@ -101,8 +101,8 @@ body {
     content: "";
     display: block;
     background: #1f282d;
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     transform: rotate(45deg);
     transform-origin: center;
     bottom: -9px;

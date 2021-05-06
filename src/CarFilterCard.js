@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const CarFilter = ({ imgAddress, carType, price, style }) => {
+const CarFilterCard = ({ imgAddress, carType, price, style }) => {
     const [isClicked, setIsClicked] = useState(false);
     const [showPriceTooltip, setShowPriceTooltip] = useState("notdisplayed");
 
@@ -45,4 +45,4 @@ const CarFilter = ({ imgAddress, carType, price, style }) => {
     );
 };
 
-export default CarFilter;
+export default CarFilterCard;
