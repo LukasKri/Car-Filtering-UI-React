@@ -1,5 +1,4 @@
 body {
-    /* margin: 0; */
     background: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -79,4 +78,42 @@ body {
 .car-img {
     height: 32px;
     width: 48px;
+}
+
+.notdisplayed {
+    display: none;
+}
+
+.displayed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1f282d;
+    border-radius: 4px;
+    position: absolute;
+    top: 10px;
+    border: 1px solid #9ba8b0;
+    width: 71px;
+    height: 51px;
+}
+
+.displayed::before {
+    content: "";
+    display: block;
+    background: #1f282d;
+    width: 16px;
+    height: 16px;
+    transform: rotate(45deg);
+    transform-origin: center;
+    bottom: -9px;
+    position: absolute;
+}
+
+.price-tooltip-text {
+    background: #1f282d;
+    color: #f9fafb;
+    fill: #f9fafb;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
 }

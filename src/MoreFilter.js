@@ -2,6 +2,17 @@ import React, { useState } from "react";
 
 const MoreFilter = () => {
     const [isClicked, setIsClicked] = useState(false);
+
+    const darkTheme = {
+        background: "#2c3439",
+        color: "#fff",
+    };
+
+    const lightTheme = {
+        background: "#fff",
+        color: "#192024",
+    };
+
     const handleClick = (e) => {
         console.log("More filter was clicked.");
         setIsClicked((prevClicked) => !prevClicked);
@@ -12,11 +23,7 @@ const MoreFilter = () => {
             <div
                 className="more-filter"
                 onClick={handleClick}
-                style={
-                    isClicked
-                        ? { background: "#2c3439", color: "#fff" }
-                        : { background: "#fff", color: "#192024" }
-                }
+                style={isClicked ? darkTheme : lightTheme}
             >
                 <div>More</div>
                 <svg
