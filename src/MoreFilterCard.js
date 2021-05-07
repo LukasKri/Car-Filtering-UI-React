@@ -19,7 +19,7 @@ const MoreFilterCard = ({ imgAddress, carType, price }) => {
                                 <div className="m-f-car-type">{carType}</div>
                             </div>
                             <div className="m-f-price-box">
-                                <div className="m-f-price-tooltip">{price}</div>
+                                <div className="m-f-price-tag">{price}</div>
                             </div>
                         </div>
                     </div>

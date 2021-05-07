@@ -92,11 +92,7 @@ body {
 
 /* PRICE TOOLTIP */
 
-.notdisplayed {
-    display: none;
-}
-
-.displayed {
+.price-tooltip {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,7 +105,7 @@ body {
     height: 51px;
 }
 
-.displayed::before {
+.price-tooltip::before {
     content: "";
     display: block;
     background: #1f282d;
@@ -121,7 +117,7 @@ body {
     position: absolute;
 }
 
-.price-tooltip {
+.price-tag {
     background: #1f282d;
     color: #f9fafb;
     fill: #f9fafb;
@@ -189,7 +185,7 @@ body {
     flex: 1 0 auto;
 }
 
-.m-f-price-tooltip {
+.m-f-price-tag {
     color: #647582;
     margin-left: 3px;
     font-size: 0.8rem;

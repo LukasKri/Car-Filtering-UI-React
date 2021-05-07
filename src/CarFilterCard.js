@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const CarFilterCard = ({ imgAddress, carType, price, style }) => {
     const [isClicked, setIsClicked] = useState(false);
-    const [showPriceTooltip, setShowPriceTooltip] = useState("notdisplayed");
+    const [showPriceTooltip, setShowPriceTooltip] = useState(false);
 
     const darkTheme = {
         background: "#2c3439",
@@ -19,18 +19,20 @@ const CarFilterCard = ({ imgAddress, carType, price, style }) => {
     };
 
     const handleMouseEnter = () => {
-        setShowPriceTooltip("displayed");
+        setShowPriceTooltip(true);
     };
 
     const handleMouseLeave = () => {
-        setShowPriceTooltip("notdisplayed");
+        setShowPriceTooltip(false);
     };
 
     return (
         <>
-            <div className={showPriceTooltip} style={style}>
-                <div className="price-tooltip">{price}</div>
-            </div>
+            {showPriceTooltip && (
+                <div className="price-tooltip" style={style}>
+                    <div className="price-tag">{price}</div>
+                </div>
+            )}
             <div
                 className="car-filter-card"
                 onClick={handleClick}
