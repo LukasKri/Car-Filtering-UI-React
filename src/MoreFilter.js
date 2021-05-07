@@ -40,7 +40,7 @@ const MoreFilter = () => {
                 </svg>
             </div>
             {isClicked && (
-                <div className="more-filter-cards">
+                <div className="more-filter-cards-outer">
                     <MoreFilterCard
                         imgAddress={
                             "https://content.r9cdn.net/rimg/carimages/generic/04_premium.png?width=108&height=72"

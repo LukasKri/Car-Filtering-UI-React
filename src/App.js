@@ -1,10 +1,11 @@
 import CarFilterCard from "./CarFilterCard";
+import Header from "./Header";
 import MoreFilter from "./MoreFilter";
 
 function App() {
     return (
         <div className="App">
-            <div className="header">Car type</div>
+            <Header />
             <div className="car-filter-cards">
                 <CarFilterCard
                     imgAddress={
@@ -12,7 +13,7 @@ function App() {
                     }
                     carType={"Small"}
                     price={"$233+"}
-                    style={{ left: "39px" }}
+                    style={{ left: "38px" }}
                 />
                 <CarFilterCard
                     imgAddress={
@@ -44,7 +45,7 @@ function App() {
                     }
                     carType={"VAN"}
                     price={"$364+"}
-                    style={{ left: "427px" }}
+                    style={{ left: "426px" }}
                 />
                 <MoreFilter />
             </div>

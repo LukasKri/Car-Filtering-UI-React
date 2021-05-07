@@ -6,12 +6,20 @@ body {
 }
 
 .header {
+    display: flex;
+    justify-content: space-between;
     font-size: 12px;
     font-weight: 700;
     line-height: 18px;
     margin-bottom: 8px;
     margin-top: 50px;
     margin-left: 20px;
+    width: 560px;
+}
+
+.header-reset {
+    color: #0080a4;
+    cursor: pointer;
 }
 
 /* CAR FILTER BUTTONS */
@@ -37,7 +45,7 @@ body {
     line-height: 18px;
     margin: 0px 4px 16px 0px;
     min-width: 75px;
-    /* box-shadow: 0 3px 5px rgb(25 32 36 / 16%); */
+    transition: color 0.2s ease-out, background-color 0.2s ease-out;
     padding: 4px 8px;
     font-weight: 700;
     font-size: 12px;
@@ -62,7 +70,7 @@ body {
     margin-right: 0;
     margin-bottom: 16px;
     min-width: 75px;
-    /* box-shadow: 0 3px 5px rgb(25 32 36 / 16%); */
+    transition: color 0.2s ease-out, background-color 0.2s ease-out;
     padding: 4px 12px;
     font-weight: 700;
     font-size: 12px;
@@ -123,12 +131,12 @@ body {
 
 /* MORE FILTER CARDS AND CONTENT */
 
-.more-filter-cards {
+.more-filter-cards-outer {
     border-radius: 8px;
     position: absolute;
     top: 135px;
     left: 513px;
-    border: 1px solid #9ba8b0;
+    box-shadow: 0 3px 5px rgb(25 32 36 / 16%);
 }
 
 .m-f-content {
