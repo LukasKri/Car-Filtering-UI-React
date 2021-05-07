@@ -29,16 +29,20 @@ const CarFilterCard = ({ imgAddress, carType, price, style }) => {
     return (
         <>
             <div className={showPriceTooltip} style={style}>
-                <div className="price-tooltip-text">{price}</div>
+                <div className="price-tooltip">{price}</div>
             </div>
             <div
-                className="car-filter"
+                className="car-filter-card"
                 onClick={handleClick}
                 style={isClicked ? darkTheme : lightTheme}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
-                <img className="car-img" src={imgAddress} alt={carType} />
+                <img
+                    className="car-img"
+                    src={imgAddress}
+                    alt={`${carType}-car-type-img`}
+                />
                 <div className="car-type">{carType}</div>
             </div>
         </>

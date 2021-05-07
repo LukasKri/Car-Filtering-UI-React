@@ -1,42 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 
-const MoreFilterCard = () => {
-    const [isClicked, setIsClicked] = useState(false);
-
-    const darkTheme = {
-        background: "#2c3439",
-        color: "#fff",
-    };
-
-    const lightTheme = {
-        background: "#fff",
-        color: "#192024",
-    };
-
-    const handleClick = (e) => {
-        console.log("More filter was clicked.");
-        setIsClicked((prevClicked) => !prevClicked);
-    };
-
+const MoreFilterCard = ({ imgAddress, carType, price }) => {
     return (
         <>
-            <div
-                className="more-filter-card"
-                onClick={handleClick}
-                style={isClicked ? darkTheme : lightTheme}
-            >
-                <div>More</div>
-                <svg
-                    className="svg-image"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 200 200"
-                >
-                    <path
-                        d="M100 132.5c-3.873 0 .136 2.376-64.801-51.738l9.603-11.523L100 115.237l55.199-45.999l9.603 11.523C99.806 134.924 103.855 132.5 100 132.5z"
-                        fill={isClicked ? "#fff" : "#192024"}
-                    ></path>
-                </svg>
+            <div className="m-f-content" role="dialog">
+                <div className="m-f-inner">
+                    <div className="m-f-cards">
+                        <div className="m-f-card">
+                            <input className="m-f-input" type="checkbox" />
+                            <div className="m-f-img-car-type">
+                                <div className="m-f-car-img">
+                                    <img
+                                        className="car-img"
+                                        src={imgAddress}
+                                        alt={`${carType}-car-type-img`}
+                                    />
+                                </div>
+                                <div className="m-f-car-type">{carType}</div>
+                            </div>
+                            <div className="m-f-price-box">
+                                <div className="m-f-price-tooltip">{price}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     );

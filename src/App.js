@@ -1,5 +1,5 @@
 import CarFilterCard from "./CarFilterCard";
-import MoreFilterCard from "./MoreFilterCard";
+import MoreFilter from "./MoreFilter";
 
 function App() {
     return (
@@ -38,7 +38,15 @@ function App() {
                     price={"$383+"}
                     style={{ left: "329px" }}
                 />
-                <MoreFilterCard />
+                <CarFilterCard
+                    imgAddress={
+                        "https://content.r9cdn.net/rimg/carimages/generic/11_van_white.png?width=108&height=72"
+                    }
+                    carType={"VAN"}
+                    price={"$364+"}
+                    style={{ left: "427px" }}
+                />
+                <MoreFilter />
             </div>
         </div>
     );
