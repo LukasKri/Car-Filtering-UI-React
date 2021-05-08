@@ -14,14 +14,14 @@ const SelectedOptionsCount = (props) => {
         isCommercialChecked &&
         isPickupTruckChecked
     ) {
-        return <div>4 Selected</div>;
+        return <div className="selected-details">4 selected</div>;
     } else if (
         (isLuxuryChecked && isConvertibleChecked && isCommercialChecked) ||
         (isLuxuryChecked && isConvertibleChecked && isPickupTruckChecked) ||
         (isLuxuryChecked && isCommercialChecked && isPickupTruckChecked) ||
         (isConvertibleChecked && isCommercialChecked && isPickupTruckChecked)
     ) {
-        return <div>3 Selected</div>;
+        return <div className="selected-details">3 selected</div>;
     } else if (
         (isLuxuryChecked && isConvertibleChecked) ||
         (isLuxuryChecked && isCommercialChecked) ||
@@ -30,15 +30,15 @@ const SelectedOptionsCount = (props) => {
         (isConvertibleChecked && isPickupTruckChecked) ||
         (isCommercialChecked && isPickupTruckChecked)
     ) {
-        return <div>2 Selected</div>;
+        return <div className="selected-details">2 selected</div>;
     } else if (isLuxuryChecked) {
-        return <div>Luxury</div>;
+        return <div className="selected-details">Luxury</div>;
     } else if (isConvertibleChecked) {
-        return <div>Convertible</div>;
+        return <div className="selected-details">Convertible</div>;
     } else if (isCommercialChecked) {
-        return <div>Commercial</div>;
+        return <div className="selected-details">Commercial</div>;
     } else if (isPickupTruckChecked) {
-        return <div>Pickup Truck</div>;
+        return <div className="selected-details">Pickup Truck</div>;
     } else {
         return null;
     }

@@ -135,6 +135,10 @@ body {
     box-shadow: 0 3px 5px rgb(25 32 36 / 16%);
 }
 
+.more-filter-title {
+    padding-right: 8px;
+}
+
 .m-f-content {
     display: block;
     cursor: pointer;
@@ -189,4 +193,10 @@ body {
     color: #647582;
     margin-left: 3px;
     font-size: 0.8rem;
+}
+
+.selected-details {
+    font-weight: 400;
+    line-height: 18px;
+    font-size: 12px;
 }
