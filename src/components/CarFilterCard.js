@@ -1,18 +1,17 @@
 import React, { useState } from "react";
 
 const CarFilterCard = (props) => {
-    const { imgAddress, carType, price, style, isClicked, handleClick } = props;
+    const {
+        imgAddress,
+        carType,
+        price,
+        style,
+        isClicked,
+        handleClick,
+        darkTheme,
+        lightTheme,
+    } = props;
     const [showPriceTooltip, setShowPriceTooltip] = useState(false);
-
-    const darkTheme = {
-        background: "#2c3439",
-        color: "#fff",
-    };
-
-    const lightTheme = {
-        background: "#fff",
-        color: "#192024",
-    };
 
     const handleMouseEnter = () => {
         setShowPriceTooltip(true);

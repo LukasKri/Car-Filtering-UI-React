@@ -55,6 +55,17 @@ function App() {
         setIsMoreFilterClicked((prevClicked) => !prevClicked);
     };
 
+    const darkTheme = {
+        background: "#363f45",
+        borderColor: "#363f45",
+        color: "#fff",
+    };
+
+    const lightTheme = {
+        background: "#fff",
+        color: "#192024",
+    };
+
     return (
         <div className="App">
             <Header
@@ -85,9 +96,11 @@ function App() {
                     }
                     carType={"Small"}
                     price={"$233+"}
-                    style={{ left: "38px" }}
+                    style={{ left: "36px" }}
                     isClicked={isSmallClicked}
                     handleClick={handleSmallClick}
+                    darkTheme={darkTheme}
+                    lightTheme={lightTheme}
                 />
                 <CarFilterCard
                     imgAddress={
@@ -95,9 +108,11 @@ function App() {
                     }
                     carType={"Medium"}
                     price={"$279+"}
-                    style={{ left: "135px" }}
+                    style={{ left: "128px" }}
                     isClicked={isMediumClicked}
                     handleClick={handleMediumClick}
+                    darkTheme={darkTheme}
+                    lightTheme={lightTheme}
                 />
                 <CarFilterCard
                     imgAddress={
@@ -105,9 +120,11 @@ function App() {
                     }
                     carType={"Large"}
                     price={"$279+"}
-                    style={{ left: "232px" }}
+                    style={{ left: "220px" }}
                     isClicked={isLargeClicked}
                     handleClick={handleLargeClick}
+                    darkTheme={darkTheme}
+                    lightTheme={lightTheme}
                 />
                 <CarFilterCard
                     imgAddress={
@@ -115,9 +132,11 @@ function App() {
                     }
                     carType={"SUV"}
                     price={"$383+"}
-                    style={{ left: "329px" }}
+                    style={{ left: "312px" }}
                     isClicked={isSUVClicked}
                     handleClick={handleSUVClick}
+                    darkTheme={darkTheme}
+                    lightTheme={lightTheme}
                 />
                 <CarFilterCard
                     imgAddress={
@@ -125,9 +144,11 @@ function App() {
                     }
                     carType={"Van"}
                     price={"$364+"}
-                    style={{ left: "426px" }}
+                    style={{ left: "404px" }}
                     isClicked={isVanClicked}
                     handleClick={handleVanClick}
+                    darkTheme={darkTheme}
+                    lightTheme={lightTheme}
                 />
                 <MoreFilter
                     isLuxuryClicked={isLuxuryClicked}
@@ -145,6 +166,8 @@ function App() {
                     isMoreFilterClicked={isMoreFilterClicked}
                     setIsMoreFilterClicked={setIsMoreFilterClicked}
                     handleMoreFilterClick={handleMoreFilterClick}
+                    darkTheme={darkTheme}
+                    lightTheme={lightTheme}
                 />
             </div>
         </div>

@@ -22,17 +22,9 @@ const MoreFilter = (props) => {
         isMoreFilterClicked,
         setIsMoreFilterClicked,
         handleMoreFilterClick,
+        darkTheme,
+        lightTheme,
     } = props;
-
-    const darkTheme = {
-        background: "#2c3439",
-        color: "#fff",
-    };
-
-    const lightTheme = {
-        background: "#fff",
-        color: "#192024",
-    };
 
     const useOutsideAlerter = (ref) => {
         useEffect(() => {
@@ -101,42 +93,44 @@ const MoreFilter = (props) => {
             </div>
             {isMoreFilterClicked && (
                 <div className="more-filter-cards-outer">
-                    <MoreFilterCard
-                        imgAddress={
-                            "https://content.r9cdn.net/rimg/carimages/generic/04_premium.png?width=108&height=72"
-                        }
-                        carType={"Luxury"}
-                        price={"$364"}
-                        isChecked={isLuxuryClicked}
-                        handleCheckboxClick={handleLuxuryClick}
-                    />
-                    <MoreFilterCard
-                        imgAddress={
-                            "https://content.r9cdn.net/rimg/carimages/generic/08_convertible_white.png?width=108&height=72"
-                        }
-                        carType={"Convertible"}
-                        price={"$542"}
-                        isChecked={isConvertibleClicked}
-                        handleCheckboxClick={handleConvertibleClick}
-                    />
-                    <MoreFilterCard
-                        imgAddress={
-                            "https://content.r9cdn.net/rimg/carimages/generic/14_commercial_white.png?width=108&height=72"
-                        }
-                        carType={"Commercial"}
-                        price={"$1,256"}
-                        isChecked={isCommercialClicked}
-                        handleCheckboxClick={handleCommercialClick}
-                    />
-                    <MoreFilterCard
-                        imgAddress={
-                            "https://content.r9cdn.net/rimg/carimages/generic/12_truck_white.png?width=108&height=72"
-                        }
-                        carType={"Pickup Truck"}
-                        price={"$1,307"}
-                        isChecked={isPickupTruckClicked}
-                        handleCheckboxClick={handlePickupTruckClick}
-                    />
+                    <div className="more-filter-cards-inner">
+                        <MoreFilterCard
+                            imgAddress={
+                                "https://content.r9cdn.net/rimg/carimages/generic/04_premium.png?width=108&height=72"
+                            }
+                            carType={"Luxury"}
+                            price={"$364"}
+                            isChecked={isLuxuryClicked}
+                            handleCheckboxClick={handleLuxuryClick}
+                        />
+                        <MoreFilterCard
+                            imgAddress={
+                                "https://content.r9cdn.net/rimg/carimages/generic/08_convertible_white.png?width=108&height=72"
+                            }
+                            carType={"Convertible"}
+                            price={"$542"}
+                            isChecked={isConvertibleClicked}
+                            handleCheckboxClick={handleConvertibleClick}
+                        />
+                        <MoreFilterCard
+                            imgAddress={
+                                "https://content.r9cdn.net/rimg/carimages/generic/14_commercial_white.png?width=108&height=72"
+                            }
+                            carType={"Commercial"}
+                            price={"$1,256"}
+                            isChecked={isCommercialClicked}
+                            handleCheckboxClick={handleCommercialClick}
+                        />
+                        <MoreFilterCard
+                            imgAddress={
+                                "https://content.r9cdn.net/rimg/carimages/generic/12_truck_white.png?width=108&height=72"
+                            }
+                            carType={"Pickup Truck"}
+                            price={"$1,307"}
+                            isChecked={isPickupTruckClicked}
+                            handleCheckboxClick={handlePickupTruckClick}
+                        />
+                    </div>
                 </div>
             )}
         </div>
