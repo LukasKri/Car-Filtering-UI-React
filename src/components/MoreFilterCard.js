@@ -1,14 +1,31 @@
 import React from "react";
 
 const MoreFilterCard = (props) => {
-    const { imgAddress, carType, price } = props;
+    const {
+        imgAddress,
+        carType,
+        price,
+        isChecked,
+        handleCheckboxClick,
+    } = props;
+
+    // const handleCheckboxClick = () => {
+    //     console.log("Checkbox clicked");
+    //     setIsChecked((prevClicked) => !prevClicked);
+    // };
+
     return (
         <>
             <div className="m-f-content" role="dialog">
                 <div className="m-f-inner">
                     <div className="m-f-cards">
                         <div className="m-f-card">
-                            <input className="m-f-input" type="checkbox" />
+                            <input
+                                className="m-f-input"
+                                type="checkbox"
+                                checked={isChecked}
+                                onChange={handleCheckboxClick}
+                            />
                             <div className="m-f-img-car-type">
                                 <div className="m-f-car-img">
                                     <img

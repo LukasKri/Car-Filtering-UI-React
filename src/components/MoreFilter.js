@@ -1,9 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import MoreFilterCard from "./MoreFilterCard";
 
 const MoreFilter = () => {
-    const container = useRef();
-    const [isClicked, setIsClicked] = useState(false);
+    const [isMoreFilterClicked, setIsMoreFilterClicked] = useState(false);
+    const [isLuxuryChecked, setIsLuxuryChecked] = useState(false);
+    const [isConvertibleChecked, setIsConvertibleChecked] = useState(false);
+    const [isCommercialChecked, setIsCommercialChecked] = useState(false);
+    const [isPickupTruckChecked, setIsPickupTruckChecked] = useState(false);
 
     const darkTheme = {
         background: "#2c3439",
@@ -15,37 +18,62 @@ const MoreFilter = () => {
         color: "#192024",
     };
 
-    const handleTestClick = (e) => {
+    const handleMoreFilterClick = (e) => {
         console.log("More filter was clicked.");
-        setIsClicked((prevClicked) => !prevClicked);
+        setIsMoreFilterClicked((prevClicked) => !prevClicked);
     };
 
-    const handleClick = (e) => {
-        if (container.current.contains(e.target)) {
-            console.log(container);
-            setIsClicked(true);
-        } else {
-            setIsClicked(false);
-        }
+    const handleLuxuryClick = () => {
+        setIsLuxuryChecked((prevClicked) => !prevClicked);
     };
 
-    useEffect(() => {
-        // add when mounted
-        document.addEventListener("click", handleClick);
-        // return function to be called when unmounted
-        return () => {
-            document.removeEventListener("click", handleClick);
-        };
-    }, []);
+    const handleConvertibleClick = () => {
+        // console.log("Convertible checkbox clicked");
+        setIsConvertibleChecked((prevClicked) => !prevClicked);
+    };
+
+    const handleCommercialClick = () => {
+        // console.log("Commercial checkbox clicked");
+        setIsCommercialChecked((prevClicked) => !prevClicked);
+    };
+
+    const handlePickupTruckClick = () => {
+        // console.log("Pickup Truck checkbox clicked");
+        setIsPickupTruckChecked((prevClicked) => !prevClicked);
+    };
+
+    // const handleManyChecks = () => {
+    //     if (isLuxuryChecked && isConvertibleChecked) {
+    //         console.log("Luxury and Convertible checked");
+    //         return <div>2 Selected</div>;
+    //     } else if (isLuxuryChecked) {
+    //         console.log("Luxury checked");
+    //         return <div>Luxury</div>;
+    //     } else if (isConvertibleChecked) {
+    //         console.log("Convertible checked");
+    //         return <div>Convertible</div>;
+    //     } else if (isCommercialChecked) {
+    //         console.log("Commercial checked");
+    //         return <div>Commercial</div>;
+    //     } else if (isPickupTruckChecked) {
+    //         console.log("Pickup Truck checked");
+    //         return <div>Pickup Truck</div>;
+    //     }
+    // };
 
     return (
-        <div ref={container}>
+        <>
             <div
                 className="more-filter-button-card"
-                onClick={handleTestClick}
-                style={isClicked ? darkTheme : lightTheme}
+                onClick={handleMoreFilterClick}
+                style={isMoreFilterClicked ? darkTheme : lightTheme}
             >
-                <div>More</div>
+                <div>
+                    More
+                    {/* {handleManyChecks()} */}
+                    {/* {isLuxuryChecked ? <div>Luxury</div> : null}
+                    {isConvertibleChecked ? <div>Convertible</div> : null} */}
+                </div>
                 <svg
                     className="svg-image"
                     role="img"
@@ -54,11 +82,11 @@ const MoreFilter = () => {
                 >
                     <path
                         d="M100 132.5c-3.873 0 .136 2.376-64.801-51.738l9.603-11.523L100 115.237l55.199-45.999l9.603 11.523C99.806 134.924 103.855 132.5 100 132.5z"
-                        fill={isClicked ? "#fff" : "#192024"}
+                        fill={isMoreFilterClicked ? "#fff" : "#192024"}
                     ></path>
                 </svg>
             </div>
-            {isClicked && (
+            {isMoreFilterClicked && (
                 <div className="more-filter-cards-outer">
                     <MoreFilterCard
                         imgAddress={
@@ -66,6 +94,8 @@ const MoreFilter = () => {
                         }
                         carType={"Luxury"}
                         price={"$364"}
+                        isChecked={isLuxuryChecked}
+                        handleCheckboxClick={handleLuxuryClick}
                     />
                     <MoreFilterCard
                         imgAddress={
@@ -73,6 +103,8 @@ const MoreFilter = () => {
                         }
                         carType={"Convertible"}
                         price={"$542"}
+                        isChecked={isConvertibleChecked}
+                        handleCheckboxClick={handleConvertibleClick}
                     />
                     <MoreFilterCard
                         imgAddress={
@@ -80,6 +112,8 @@ const MoreFilter = () => {
                         }
                         carType={"Commercial"}
                         price={"$1,256"}
+                        isChecked={isCommercialChecked}
+                        handleCheckboxClick={handleCommercialClick}
                     />
                     <MoreFilterCard
                         imgAddress={
@@ -87,10 +121,12 @@ const MoreFilter = () => {
                         }
                         carType={"Pickup Truck"}
                         price={"$1,307"}
+                        isChecked={isPickupTruckChecked}
+                        handleCheckboxClick={handlePickupTruckClick}
                     />
                 </div>
             )}
-        </div>
+        </>
     );
 };
 
