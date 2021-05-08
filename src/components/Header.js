@@ -20,6 +20,7 @@ const Header = (props) => {
         setIsCommercialClicked,
         isPickupTruckClicked,
         setIsPickupTruckClicked,
+        setIsMoreFilterClicked,
     } = props;
 
     const handleResetClick = () => {
@@ -32,6 +33,7 @@ const Header = (props) => {
         setIsConvertibleClicked(false);
         setIsCommercialClicked(false);
         setIsPickupTruckClicked(false);
+        setIsMoreFilterClicked(false);
     };
 
     return (

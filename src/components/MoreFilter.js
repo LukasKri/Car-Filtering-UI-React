@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import DropdownSVG from "./DropdownSVG";
 import MoreFilterCard from "./MoreFilterCard";
 import ResetSVG from "./ResetSVG";
@@ -18,9 +18,12 @@ const MoreFilter = (props) => {
         isPickupTruckClicked,
         setIsPickupTruckClicked,
         handlePickupTruckClick,
+        isMoreFilterClicked,
+        setIsMoreFilterClicked,
+        handleMoreFilterClick,
     } = props;
 
-    const [isMoreFilterClicked, setIsMoreFilterClicked] = useState(false);
+    // const [isMoreFilterClicked, setIsMoreFilterClicked] = useState(false);
 
     const darkTheme = {
         background: "#2c3439",
@@ -32,17 +35,24 @@ const MoreFilter = (props) => {
         color: "#192024",
     };
 
-    const handleMoreFilterClick = (e) => {
-        console.log("More filter was clicked.");
-        setIsMoreFilterClicked((prevClicked) => !prevClicked);
-    };
+    // const handleMoreFilterClick = (e) => {
+    //     setIsMoreFilterClicked((prevClicked) => !prevClicked);
+    // };
 
     return (
         <>
             <div
                 className="more-filter-button-card"
                 onClick={handleMoreFilterClick}
-                style={isMoreFilterClicked ? darkTheme : lightTheme}
+                style={
+                    isMoreFilterClicked ||
+                    isLuxuryClicked ||
+                    isConvertibleClicked ||
+                    isCommercialClicked ||
+                    isPickupTruckClicked
+                        ? darkTheme
+                        : lightTheme
+                }
             >
                 <div className="more-filter-title">
                     More
@@ -62,6 +72,7 @@ const MoreFilter = (props) => {
                         setIsConvertibleClicked={setIsConvertibleClicked}
                         setIsCommercialClicked={setIsCommercialClicked}
                         setIsPickupTruckClicked={setIsPickupTruckClicked}
+                        setIsMoreFilterClicked={setIsMoreFilterClicked}
                     />
                 ) : (
                     <DropdownSVG isMoreFilterClicked={isMoreFilterClicked} />

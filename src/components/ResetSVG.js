@@ -6,6 +6,7 @@ const ResetSVG = (props) => {
         setIsConvertibleClicked,
         setIsCommercialClicked,
         setIsPickupTruckClicked,
+        setIsMoreFilterClicked,
     } = props;
 
     const handleResetClick = () => {
@@ -13,6 +14,7 @@ const ResetSVG = (props) => {
         setIsConvertibleClicked(false);
         setIsCommercialClicked(false);
         setIsPickupTruckClicked(false);
+        setIsMoreFilterClicked(true);
     };
 
     return (

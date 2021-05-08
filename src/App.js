@@ -13,6 +13,7 @@ function App() {
     const [isConvertibleClicked, setIsConvertibleClicked] = useState(false);
     const [isCommercialClicked, setIsCommercialClicked] = useState(false);
     const [isPickupTruckClicked, setIsPickupTruckClicked] = useState(false);
+    const [isMoreFilterClicked, setIsMoreFilterClicked] = useState(false);
 
     const handleSmallClick = () => {
         setIsSmallClicked((prevClicked) => !prevClicked);
@@ -50,6 +51,10 @@ function App() {
         setIsPickupTruckClicked((prevClicked) => !prevClicked);
     };
 
+    const handleMoreFilterClick = (e) => {
+        setIsMoreFilterClicked((prevClicked) => !prevClicked);
+    };
+
     return (
         <div className="App">
             <Header
@@ -71,6 +76,7 @@ function App() {
                 setIsCommercialClicked={setIsCommercialClicked}
                 isPickupTruckClicked={isPickupTruckClicked}
                 setIsPickupTruckClicked={setIsPickupTruckClicked}
+                setIsMoreFilterClicked={setIsMoreFilterClicked}
             />
             <div className="car-filter-cards">
                 <CarFilterCard
@@ -136,6 +142,9 @@ function App() {
                     isPickupTruckClicked={isPickupTruckClicked}
                     setIsPickupTruckClicked={setIsPickupTruckClicked}
                     handlePickupTruckClick={handlePickupTruckClick}
+                    isMoreFilterClicked={isMoreFilterClicked}
+                    setIsMoreFilterClicked={setIsMoreFilterClicked}
+                    handleMoreFilterClick={handleMoreFilterClick}
                 />
             </div>
         </div>
