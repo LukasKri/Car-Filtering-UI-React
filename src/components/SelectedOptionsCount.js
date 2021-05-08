@@ -39,8 +39,6 @@ const SelectedOptionsCount = (props) => {
         return <div className="selected-details">Commercial</div>;
     } else if (isPickupTruckClicked) {
         return <div className="selected-details">Pickup Truck</div>;
-    } else {
-        return null;
     }
 };
 

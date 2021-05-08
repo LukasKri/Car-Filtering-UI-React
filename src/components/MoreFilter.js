@@ -23,8 +23,6 @@ const MoreFilter = (props) => {
         handleMoreFilterClick,
     } = props;
 
-    // const [isMoreFilterClicked, setIsMoreFilterClicked] = useState(false);
-
     const darkTheme = {
         background: "#2c3439",
         color: "#fff",
@@ -34,10 +32,6 @@ const MoreFilter = (props) => {
         background: "#fff",
         color: "#192024",
     };
-
-    // const handleMoreFilterClick = (e) => {
-    //     setIsMoreFilterClicked((prevClicked) => !prevClicked);
-    // };
 
     return (
         <>
@@ -56,12 +50,17 @@ const MoreFilter = (props) => {
             >
                 <div className="more-filter-title">
                     More
-                    <SelectedOptionsCount
-                        isLuxuryClicked={isLuxuryClicked}
-                        isConvertibleClicked={isConvertibleClicked}
-                        isCommercialClicked={isCommercialClicked}
-                        isPickupTruckClicked={isPickupTruckClicked}
-                    />
+                    {(isLuxuryClicked ||
+                        isConvertibleClicked ||
+                        isCommercialClicked ||
+                        isPickupTruckClicked) && (
+                        <SelectedOptionsCount
+                            isLuxuryClicked={isLuxuryClicked}
+                            isConvertibleClicked={isConvertibleClicked}
+                            isCommercialClicked={isCommercialClicked}
+                            isPickupTruckClicked={isPickupTruckClicked}
+                        />
+                    )}
                 </div>
                 {isLuxuryClicked ||
                 isConvertibleClicked ||
