@@ -1,4 +1,5 @@
 import React from "react";
+import "./DropdownSVG.scss";
 
 const DropdownSVG = (props) => {
     const { isMoreFilterClicked } = props;

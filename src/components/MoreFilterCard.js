@@ -1,4 +1,5 @@
 import React from "react";
+import "./MoreFilterCard.scss";
 
 const MoreFilterCard = (props) => {
     const {
@@ -23,7 +24,7 @@ const MoreFilterCard = (props) => {
                             type="checkbox"
                             checked={isChecked}
                             // not the best way to disable console warning
-                            onChange={() => {}}
+                            // onChange={() => {}}
                         />
                         <div className="m-f-img-car-type">
                             <div className="m-f-car-img">

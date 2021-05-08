@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./CarFilterCard.scss";
 
 const CarFilterCard = (props) => {
     const {
@@ -11,6 +12,7 @@ const CarFilterCard = (props) => {
         darkTheme,
         lightTheme,
     } = props;
+
     const [showPriceTooltip, setShowPriceTooltip] = useState(false);
 
     const handleMouseEnter = () => {

@@ -1,4 +1,5 @@
 import React from "react";
+import "./ResetSVG.scss";
 
 const ResetSVG = (props) => {
     const {

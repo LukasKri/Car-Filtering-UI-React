@@ -1,4 +1,5 @@
 import React from "react";
+import "./SelectedOptionsCount.scss";
 
 const SelectedOptionsCount = (props) => {
     const {

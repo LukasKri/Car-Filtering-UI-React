@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "./App.scss";
+
 import CarFilterCard from "./components/CarFilterCard";
 import Header from "./components/Header";
 import MoreFilter from "./components/MoreFilter";
