@@ -32,7 +32,18 @@ function App() {
 
     return (
         <div className="App">
-            <Header isSmallClicked={isSmallClicked} />
+            <Header
+                isSmallClicked={isSmallClicked}
+                setIsSmallClicked={setIsSmallClicked}
+                isMediumClicked={isMediumClicked}
+                setIsMediumClicked={setIsMediumClicked}
+                isLargeClicked={isLargeClicked}
+                setIsLargeClicked={setIsLargeClicked}
+                isSUVClicked={isSUVClicked}
+                setIsSUVClicked={setIsSUVClicked}
+                isVANClicked={isVANClicked}
+                setIsVANClicked={setIsVANClicked}
+            />
             <div className="car-filter-cards">
                 <CarFilterCard
                     imgAddress={
