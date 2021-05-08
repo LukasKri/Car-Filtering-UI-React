@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import MoreFilterCard from "./MoreFilterCard";
 
 const MoreFilter = () => {
+    const container = useRef();
     const [isClicked, setIsClicked] = useState(false);
 
     const darkTheme = {
@@ -14,16 +15,34 @@ const MoreFilter = () => {
         color: "#192024",
     };
 
-    const handleClick = (e) => {
+    const handleTestClick = (e) => {
         console.log("More filter was clicked.");
         setIsClicked((prevClicked) => !prevClicked);
     };
 
+    const handleClick = (e) => {
+        if (container.current.contains(e.target)) {
+            console.log(container);
+            setIsClicked(true);
+        } else {
+            setIsClicked(false);
+        }
+    };
+
+    useEffect(() => {
+        // add when mounted
+        document.addEventListener("click", handleClick);
+        // return function to be called when unmounted
+        return () => {
+            document.removeEventListener("click", handleClick);
+        };
+    }, []);
+
     return (
-        <>
+        <div ref={container}>
             <div
                 className="more-filter-button-card"
-                onClick={handleClick}
+                onClick={handleTestClick}
                 style={isClicked ? darkTheme : lightTheme}
             >
                 <div>More</div>
@@ -71,7 +90,7 @@ const MoreFilter = () => {
                     />
                 </div>
             )}
-        </>
+        </div>
     );
 };
 

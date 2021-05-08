@@ -1,7 +1,7 @@
 import { useState } from "react";
-import CarFilterCard from "./CarFilterCard";
-import Header from "./Header";
-import MoreFilter from "./MoreFilter";
+import CarFilterCard from "./components/CarFilterCard";
+import Header from "./components/Header";
+import MoreFilter from "./components/MoreFilter";
 
 function App() {
     const [isSmallClicked, setIsSmallClicked] = useState(false);
