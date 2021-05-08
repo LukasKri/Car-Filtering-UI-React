@@ -23,8 +23,11 @@ const MoreFilterCard = (props) => {
                             className="m-f-input"
                             type="checkbox"
                             checked={isChecked}
-                            // not the best way to disable console warning
-                            // onChange={() => {}}
+                            /* this may not be the best way to disable the
+                            console warning, which arise because I'm using
+                            onCilck event handler on the whole div element
+                            and not onChange on the input element */
+                            onChange={() => {}}
                         />
                         <div className="m-f-img-car-type">
                             <div className="m-f-car-img">
