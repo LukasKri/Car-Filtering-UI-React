@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+
 import DropdownSVG from "./DropdownSVG";
 import MoreFilterCard from "./MoreFilterCard";
 import ResetSVG from "./ResetSVG";
@@ -23,6 +24,23 @@ const MoreFilter = (props) => {
         handleMoreFilterClick,
     } = props;
 
+    const useCloseDropdown = (ref) => {
+        useEffect(() => {
+            function handleClickOutside(event) {
+                if (ref.current && !ref.current.contains(event.target)) {
+                    setIsMoreFilterClicked(false);
+                }
+            }
+
+            // Bind the event listener
+            document.addEventListener("mousedown", handleClickOutside);
+            return () => {
+                // Unbind the event listener on clean up
+                document.removeEventListener("mousedown", handleClickOutside);
+            };
+        }, [ref]);
+    };
+
     const darkTheme = {
         background: "#2c3439",
         color: "#fff",
@@ -32,6 +50,9 @@ const MoreFilter = (props) => {
         background: "#fff",
         color: "#192024",
     };
+
+    const wrapperRef = useRef(null);
+    useCloseDropdown(wrapperRef);
 
     return (
         <>
@@ -79,7 +100,7 @@ const MoreFilter = (props) => {
                 )}
             </div>
             {isMoreFilterClicked && (
-                <div className="more-filter-cards-outer">
+                <div className="more-filter-cards-outer" ref={wrapperRef}>
                     <MoreFilterCard
                         imgAddress={
                             "https://content.r9cdn.net/rimg/carimages/generic/04_premium.png?width=108&height=72"
