@@ -36,6 +36,7 @@ const MoreFilter = (props) => {
     return (
         <>
             <div
+                role="button"
                 className="more-filter-button-card"
                 onClick={handleMoreFilterClick}
                 style={

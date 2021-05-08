@@ -8,7 +8,7 @@ function App() {
     const [isMediumClicked, setIsMediumClicked] = useState(false);
     const [isLargeClicked, setIsLargeClicked] = useState(false);
     const [isSUVClicked, setIsSUVClicked] = useState(false);
-    const [isVANClicked, setIsVANClicked] = useState(false);
+    const [isVanClicked, setIsVanClicked] = useState(false);
     const [isLuxuryClicked, setIsLuxuryClicked] = useState(false);
     const [isConvertibleClicked, setIsConvertibleClicked] = useState(false);
     const [isCommercialClicked, setIsCommercialClicked] = useState(false);
@@ -31,8 +31,8 @@ function App() {
         setIsSUVClicked((prevClicked) => !prevClicked);
     };
 
-    const handleVANClick = () => {
-        setIsVANClicked((prevClicked) => !prevClicked);
+    const handleVanClick = () => {
+        setIsVanClicked((prevClicked) => !prevClicked);
     };
 
     const handleLuxuryClick = () => {
@@ -66,8 +66,8 @@ function App() {
                 setIsLargeClicked={setIsLargeClicked}
                 isSUVClicked={isSUVClicked}
                 setIsSUVClicked={setIsSUVClicked}
-                isVANClicked={isVANClicked}
-                setIsVANClicked={setIsVANClicked}
+                isVanClicked={isVanClicked}
+                setIsVanClicked={setIsVanClicked}
                 isLuxuryClicked={isLuxuryClicked}
                 setIsLuxuryClicked={setIsLuxuryClicked}
                 isConvertibleClicked={isConvertibleClicked}
@@ -123,11 +123,11 @@ function App() {
                     imgAddress={
                         "https://content.r9cdn.net/rimg/carimages/generic/11_van_white.png?width=108&height=72"
                     }
-                    carType={"VAN"}
+                    carType={"Van"}
                     price={"$364+"}
                     style={{ left: "426px" }}
-                    isClicked={isVANClicked}
-                    handleClick={handleVANClick}
+                    isClicked={isVanClicked}
+                    handleClick={handleVanClick}
                 />
                 <MoreFilter
                     isLuxuryClicked={isLuxuryClicked}

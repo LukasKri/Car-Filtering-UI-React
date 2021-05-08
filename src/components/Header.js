@@ -10,8 +10,8 @@ const Header = (props) => {
         setIsLargeClicked,
         isSUVClicked,
         setIsSUVClicked,
-        isVANClicked,
-        setIsVANClicked,
+        isVanClicked,
+        setIsVanClicked,
         isLuxuryClicked,
         setIsLuxuryClicked,
         isConvertibleClicked,
@@ -28,7 +28,7 @@ const Header = (props) => {
         setIsMediumClicked(false);
         setIsLargeClicked(false);
         setIsSUVClicked(false);
-        setIsVANClicked(false);
+        setIsVanClicked(false);
         setIsLuxuryClicked(false);
         setIsConvertibleClicked(false);
         setIsCommercialClicked(false);
@@ -43,7 +43,7 @@ const Header = (props) => {
                 isMediumClicked ||
                 isLargeClicked ||
                 isSUVClicked ||
-                isVANClicked ||
+                isVanClicked ||
                 isLuxuryClicked ||
                 isConvertibleClicked ||
                 isCommercialClicked ||
