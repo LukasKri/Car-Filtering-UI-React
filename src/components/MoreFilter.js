@@ -37,24 +37,47 @@ const MoreFilter = (props) => {
         setIsMoreFilterClicked((prevClicked) => !prevClicked);
     };
 
-    // const handleManyChecks = () => {
-    //     if (isLuxuryChecked && isConvertibleChecked) {
-    //         console.log("Luxury and Convertible checked");
-    //         return <div>2 Selected</div>;
-    //     } else if (isLuxuryChecked) {
-    //         console.log("Luxury checked");
-    //         return <div>Luxury</div>;
-    //     } else if (isConvertibleChecked) {
-    //         console.log("Convertible checked");
-    //         return <div>Convertible</div>;
-    //     } else if (isCommercialChecked) {
-    //         console.log("Commercial checked");
-    //         return <div>Commercial</div>;
-    //     } else if (isPickupTruckChecked) {
-    //         console.log("Pickup Truck checked");
-    //         return <div>Pickup Truck</div>;
-    //     }
-    // };
+    const handleManyChecks = () => {
+        if (
+            isLuxuryChecked &&
+            isConvertibleChecked &&
+            isCommercialChecked &&
+            isPickupTruckChecked
+        ) {
+            return <div>4 Selected</div>;
+        } else if (
+            (isLuxuryChecked && isConvertibleChecked && isCommercialChecked) ||
+            (isLuxuryChecked && isConvertibleChecked && isPickupTruckChecked) ||
+            (isLuxuryChecked && isCommercialChecked && isPickupTruckChecked) ||
+            (isConvertibleChecked &&
+                isCommercialChecked &&
+                isPickupTruckChecked)
+        ) {
+            return <div>3 Selected</div>;
+        } else if (
+            (isLuxuryChecked && isConvertibleChecked) ||
+            (isLuxuryChecked && isCommercialChecked) ||
+            (isLuxuryChecked && isPickupTruckChecked) ||
+            (isConvertibleChecked && isCommercialChecked) ||
+            (isConvertibleChecked && isPickupTruckChecked) ||
+            (isCommercialChecked && isPickupTruckChecked)
+        ) {
+            console.log("Luxury and Convertible checked");
+            return <div>2 Selected</div>;
+        } else if (isLuxuryChecked) {
+            console.log("Luxury checked");
+            return <div>Luxury</div>;
+        } else if (isConvertibleChecked) {
+            console.log("Convertible checked");
+            return <div>Convertible</div>;
+        } else if (isCommercialChecked) {
+            console.log("Commercial checked");
+            return <div>Commercial</div>;
+        } else if (isPickupTruckChecked) {
+            console.log("Pickup Truck checked");
+            return <div>Pickup Truck</div>;
+        }
+    };
 
     return (
         <>
@@ -65,9 +88,7 @@ const MoreFilter = (props) => {
             >
                 <div>
                     More
-                    {/* {handleManyChecks()} */}
-                    {/* {isLuxuryChecked ? <div>Luxury</div> : null}
-                    {isConvertibleChecked ? <div>Convertible</div> : null} */}
+                    {handleManyChecks()}
                 </div>
                 <svg
                     className="svg-image"
