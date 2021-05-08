@@ -9,10 +9,10 @@ function App() {
     const [isLargeClicked, setIsLargeClicked] = useState(false);
     const [isSUVClicked, setIsSUVClicked] = useState(false);
     const [isVANClicked, setIsVANClicked] = useState(false);
-    const [isLuxuryChecked, setIsLuxuryChecked] = useState(false);
-    const [isConvertibleChecked, setIsConvertibleChecked] = useState(false);
-    const [isCommercialChecked, setIsCommercialChecked] = useState(false);
-    const [isPickupTruckChecked, setIsPickupTruckChecked] = useState(false);
+    const [isLuxuryClicked, setIsLuxuryClicked] = useState(false);
+    const [isConvertibleClicked, setIsConvertibleClicked] = useState(false);
+    const [isCommercialClicked, setIsCommercialClicked] = useState(false);
+    const [isPickupTruckClicked, setIsPickupTruckClicked] = useState(false);
 
     const handleSmallClick = () => {
         setIsSmallClicked((prevClicked) => !prevClicked);
@@ -35,22 +35,19 @@ function App() {
     };
 
     const handleLuxuryClick = () => {
-        setIsLuxuryChecked((prevClicked) => !prevClicked);
+        setIsLuxuryClicked((prevClicked) => !prevClicked);
     };
 
     const handleConvertibleClick = () => {
-        // console.log("Convertible checkbox clicked");
-        setIsConvertibleChecked((prevClicked) => !prevClicked);
+        setIsConvertibleClicked((prevClicked) => !prevClicked);
     };
 
     const handleCommercialClick = () => {
-        // console.log("Commercial checkbox clicked");
-        setIsCommercialChecked((prevClicked) => !prevClicked);
+        setIsCommercialClicked((prevClicked) => !prevClicked);
     };
 
     const handlePickupTruckClick = () => {
-        // console.log("Pickup Truck checkbox clicked");
-        setIsPickupTruckChecked((prevClicked) => !prevClicked);
+        setIsPickupTruckClicked((prevClicked) => !prevClicked);
     };
 
     return (
@@ -66,14 +63,14 @@ function App() {
                 setIsSUVClicked={setIsSUVClicked}
                 isVANClicked={isVANClicked}
                 setIsVANClicked={setIsVANClicked}
-                isLuxuryChecked={isLuxuryChecked}
-                setIsLuxuryChecked={setIsLuxuryChecked}
-                isConvertibleChecked={isConvertibleChecked}
-                setIsConvertibleChecked={setIsConvertibleChecked}
-                isCommercialChecked={isCommercialChecked}
-                setIsCommercialChecked={setIsCommercialChecked}
-                isPickupTruckChecked={isPickupTruckChecked}
-                setIsPickupTruckChecked={setIsPickupTruckChecked}
+                isLuxuryClicked={isLuxuryClicked}
+                setIsLuxuryClicked={setIsLuxuryClicked}
+                isConvertibleClicked={isConvertibleClicked}
+                setIsConvertibleClicked={setIsConvertibleClicked}
+                isCommercialClicked={isCommercialClicked}
+                setIsCommercialClicked={setIsCommercialClicked}
+                isPickupTruckClicked={isPickupTruckClicked}
+                setIsPickupTruckClicked={setIsPickupTruckClicked}
             />
             <div className="car-filter-cards">
                 <CarFilterCard
@@ -127,13 +124,17 @@ function App() {
                     handleClick={handleVANClick}
                 />
                 <MoreFilter
-                    isLuxuryChecked={isLuxuryChecked}
+                    isLuxuryClicked={isLuxuryClicked}
+                    setIsLuxuryClicked={setIsLuxuryClicked}
                     handleLuxuryClick={handleLuxuryClick}
-                    isConvertibleChecked={isConvertibleChecked}
+                    isConvertibleClicked={isConvertibleClicked}
+                    setIsConvertibleClicked={setIsConvertibleClicked}
                     handleConvertibleClick={handleConvertibleClick}
-                    isCommercialChecked={isCommercialChecked}
+                    isCommercialClicked={isCommercialClicked}
+                    setIsCommercialClicked={setIsCommercialClicked}
                     handleCommercialClick={handleCommercialClick}
-                    isPickupTruckChecked={isPickupTruckChecked}
+                    isPickupTruckClicked={isPickupTruckClicked}
+                    setIsPickupTruckClicked={setIsPickupTruckClicked}
                     handlePickupTruckClick={handlePickupTruckClick}
                 />
             </div>

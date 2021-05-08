@@ -6,15 +6,20 @@ import SelectedOptionsCount from "./SelectedOptionsCount";
 
 const MoreFilter = (props) => {
     const {
-        isLuxuryChecked,
+        isLuxuryClicked,
+        setIsLuxuryClicked,
         handleLuxuryClick,
-        isConvertibleChecked,
+        isConvertibleClicked,
+        setIsConvertibleClicked,
         handleConvertibleClick,
-        isCommercialChecked,
+        isCommercialClicked,
+        setIsCommercialClicked,
         handleCommercialClick,
-        isPickupTruckChecked,
+        isPickupTruckClicked,
+        setIsPickupTruckClicked,
         handlePickupTruckClick,
     } = props;
+
     const [isMoreFilterClicked, setIsMoreFilterClicked] = useState(false);
 
     const darkTheme = {
@@ -42,17 +47,22 @@ const MoreFilter = (props) => {
                 <div className="more-filter-title">
                     More
                     <SelectedOptionsCount
-                        isLuxuryChecked={isLuxuryChecked}
-                        isConvertibleChecked={isConvertibleChecked}
-                        isCommercialChecked={isCommercialChecked}
-                        isPickupTruckChecked={isPickupTruckChecked}
+                        isLuxuryClicked={isLuxuryClicked}
+                        isConvertibleClicked={isConvertibleClicked}
+                        isCommercialClicked={isCommercialClicked}
+                        isPickupTruckClicked={isPickupTruckClicked}
                     />
                 </div>
-                {isLuxuryChecked ||
-                isConvertibleChecked ||
-                isCommercialChecked ||
-                isPickupTruckChecked ? (
-                    <ResetSVG />
+                {isLuxuryClicked ||
+                isConvertibleClicked ||
+                isCommercialClicked ||
+                isPickupTruckClicked ? (
+                    <ResetSVG
+                        setIsLuxuryClicked={setIsLuxuryClicked}
+                        setIsConvertibleClicked={setIsConvertibleClicked}
+                        setIsCommercialClicked={setIsCommercialClicked}
+                        setIsPickupTruckClicked={setIsPickupTruckClicked}
+                    />
                 ) : (
                     <DropdownSVG isMoreFilterClicked={isMoreFilterClicked} />
                 )}
@@ -65,7 +75,7 @@ const MoreFilter = (props) => {
                         }
                         carType={"Luxury"}
                         price={"$364"}
-                        isChecked={isLuxuryChecked}
+                        isChecked={isLuxuryClicked}
                         handleCheckboxClick={handleLuxuryClick}
                     />
                     <MoreFilterCard
@@ -74,7 +84,7 @@ const MoreFilter = (props) => {
                         }
                         carType={"Convertible"}
                         price={"$542"}
-                        isChecked={isConvertibleChecked}
+                        isChecked={isConvertibleClicked}
                         handleCheckboxClick={handleConvertibleClick}
                     />
                     <MoreFilterCard
@@ -83,7 +93,7 @@ const MoreFilter = (props) => {
                         }
                         carType={"Commercial"}
                         price={"$1,256"}
-                        isChecked={isCommercialChecked}
+                        isChecked={isCommercialClicked}
                         handleCheckboxClick={handleCommercialClick}
                     />
                     <MoreFilterCard
@@ -92,7 +102,7 @@ const MoreFilter = (props) => {
                         }
                         carType={"Pickup Truck"}
                         price={"$1,307"}
-                        isChecked={isPickupTruckChecked}
+                        isChecked={isPickupTruckClicked}
                         handleCheckboxClick={handlePickupTruckClick}
                     />
                 </div>
