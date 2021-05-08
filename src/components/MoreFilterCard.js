@@ -22,6 +22,8 @@ const MoreFilterCard = (props) => {
                             className="m-f-input"
                             type="checkbox"
                             checked={isChecked}
+                            // not the best way to disable console warning
+                            onChange={() => {}}
                         />
                         <div className="m-f-img-car-type">
                             <div className="m-f-car-img">

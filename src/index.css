@@ -25,8 +25,8 @@ body {
 /* CAR FILTER BUTTONS */
 
 .car-filter-cards {
-    margin-left: 20px;
     display: flex;
+    margin-left: 20px;
 }
 
 .car-filter-card {
@@ -39,14 +39,14 @@ body {
     border-radius: 4px;
     color: #192024;
     cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
     height: 50px;
     line-height: 18px;
+    padding: 4px 8px;
     margin: 0px 4px 16px 0px;
     min-width: 75px;
     transition: color 0.2s ease-out, background-color 0.2s ease-out;
-    padding: 4px 8px;
-    font-weight: 700;
-    font-size: 12px;
 }
 
 .car-filter-card:hover {
@@ -60,19 +60,19 @@ body {
     flex-flow: row nowrap;
     background: #ffffff;
     border: 1px solid #9ba8b0;
-    box-sizing: border-box;
     border-radius: 4px;
+    box-sizing: border-box;
     cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
     height: 60px;
     line-height: 18px;
     margin-right: 0;
     margin-bottom: 16px;
     min-width: 75px;
-    transition: color 0.2s ease-out, background-color 0.2s ease-out;
     padding: 4px 12px;
-    font-weight: 700;
-    font-size: 12px;
     position: relative;
+    transition: color 0.2s ease-out, background-color 0.2s ease-out;
 }
 
 .more-filter-button-card:hover {
@@ -80,8 +80,8 @@ body {
 }
 
 .svg-image {
-    width: 15px;
     height: 15px;
+    width: 15px;
 }
 
 .car-img {
@@ -96,24 +96,24 @@ body {
     align-items: center;
     justify-content: center;
     background: #1f282d;
+    border: 1px solid #9ba8b0;
     border-radius: 4px;
+    height: 51px;
     position: absolute;
     top: 10px;
-    border: 1px solid #9ba8b0;
     width: 71px;
-    height: 51px;
 }
 
 .price-tooltip::before {
     content: "";
     display: block;
     background: #1f282d;
-    width: 18px;
+    bottom: -9px;
     height: 18px;
+    position: absolute;
     transform: rotate(45deg);
     transform-origin: center;
-    bottom: -9px;
-    position: absolute;
+    width: 18px;
 }
 
 .price-tag {
@@ -128,10 +128,10 @@ body {
 
 .more-filter-cards-outer {
     border-radius: 8px;
+    box-shadow: 0 3px 5px rgb(25 32 36 / 16%);
+    left: 513px;
     position: absolute;
     top: 135px;
-    left: 513px;
-    box-shadow: 0 3px 5px rgb(25 32 36 / 16%);
 }
 
 .more-filter-title {
@@ -190,12 +190,12 @@ body {
 
 .m-f-price-tag {
     color: #647582;
-    margin-left: 3px;
     font-size: 0.8rem;
+    margin-left: 3px;
 }
 
 .selected-details {
+    font-size: 12px;
     font-weight: 400;
     line-height: 18px;
-    font-size: 12px;
 }

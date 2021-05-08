@@ -24,7 +24,17 @@ const MoreFilter = (props) => {
         handleMoreFilterClick,
     } = props;
 
-    const useCloseDropdown = (ref) => {
+    const darkTheme = {
+        background: "#2c3439",
+        color: "#fff",
+    };
+
+    const lightTheme = {
+        background: "#fff",
+        color: "#192024",
+    };
+
+    const useOutsideAlerter = (ref) => {
         useEffect(() => {
             function handleClickOutside(event) {
                 if (ref.current && !ref.current.contains(event.target)) {
@@ -41,21 +51,11 @@ const MoreFilter = (props) => {
         }, [ref]);
     };
 
-    const darkTheme = {
-        background: "#2c3439",
-        color: "#fff",
-    };
-
-    const lightTheme = {
-        background: "#fff",
-        color: "#192024",
-    };
-
     const wrapperRef = useRef(null);
-    useCloseDropdown(wrapperRef);
+    useOutsideAlerter(wrapperRef);
 
     return (
-        <>
+        <div ref={wrapperRef}>
             <div
                 role="button"
                 className="more-filter-button-card"
@@ -100,7 +100,7 @@ const MoreFilter = (props) => {
                 )}
             </div>
             {isMoreFilterClicked && (
-                <div className="more-filter-cards-outer" ref={wrapperRef}>
+                <div className="more-filter-cards-outer">
                     <MoreFilterCard
                         imgAddress={
                             "https://content.r9cdn.net/rimg/carimages/generic/04_premium.png?width=108&height=72"
@@ -139,7 +139,7 @@ const MoreFilter = (props) => {
                     />
                 </div>
             )}
-        </>
+        </div>
     );
 };
 
