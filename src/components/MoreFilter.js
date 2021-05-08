@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MoreFilterCard from "./MoreFilterCard";
+import SelectedOptionsCount from "./SelectedOptionsCount";
 
 const MoreFilter = (props) => {
     const {
@@ -37,48 +38,6 @@ const MoreFilter = (props) => {
         setIsMoreFilterClicked((prevClicked) => !prevClicked);
     };
 
-    const handleManyChecks = () => {
-        if (
-            isLuxuryChecked &&
-            isConvertibleChecked &&
-            isCommercialChecked &&
-            isPickupTruckChecked
-        ) {
-            return <div>4 Selected</div>;
-        } else if (
-            (isLuxuryChecked && isConvertibleChecked && isCommercialChecked) ||
-            (isLuxuryChecked && isConvertibleChecked && isPickupTruckChecked) ||
-            (isLuxuryChecked && isCommercialChecked && isPickupTruckChecked) ||
-            (isConvertibleChecked &&
-                isCommercialChecked &&
-                isPickupTruckChecked)
-        ) {
-            return <div>3 Selected</div>;
-        } else if (
-            (isLuxuryChecked && isConvertibleChecked) ||
-            (isLuxuryChecked && isCommercialChecked) ||
-            (isLuxuryChecked && isPickupTruckChecked) ||
-            (isConvertibleChecked && isCommercialChecked) ||
-            (isConvertibleChecked && isPickupTruckChecked) ||
-            (isCommercialChecked && isPickupTruckChecked)
-        ) {
-            console.log("Luxury and Convertible checked");
-            return <div>2 Selected</div>;
-        } else if (isLuxuryChecked) {
-            console.log("Luxury checked");
-            return <div>Luxury</div>;
-        } else if (isConvertibleChecked) {
-            console.log("Convertible checked");
-            return <div>Convertible</div>;
-        } else if (isCommercialChecked) {
-            console.log("Commercial checked");
-            return <div>Commercial</div>;
-        } else if (isPickupTruckChecked) {
-            console.log("Pickup Truck checked");
-            return <div>Pickup Truck</div>;
-        }
-    };
-
     return (
         <>
             <div
@@ -88,7 +47,12 @@ const MoreFilter = (props) => {
             >
                 <div>
                     More
-                    {handleManyChecks()}
+                    <SelectedOptionsCount
+                        isLuxuryChecked={isLuxuryChecked}
+                        isConvertibleChecked={isConvertibleChecked}
+                        isCommercialChecked={isCommercialChecked}
+                        isPickupTruckChecked={isPickupTruckChecked}
+                    />
                 </div>
                 <svg
                     className="svg-image"
