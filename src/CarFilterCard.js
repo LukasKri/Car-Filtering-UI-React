@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-const CarFilterCard = ({ imgAddress, carType, price, style }) => {
-    const [isClicked, setIsClicked] = useState(false);
+const CarFilterCard = (props) => {
+    const { imgAddress, carType, price, style, isClicked, handleClick } = props;
     const [showPriceTooltip, setShowPriceTooltip] = useState(false);
 
     const darkTheme = {
@@ -12,10 +12,6 @@ const CarFilterCard = ({ imgAddress, carType, price, style }) => {
     const lightTheme = {
         background: "#fff",
         color: "#192024",
-    };
-
-    const handleClick = (e) => {
-        setIsClicked((prevClicked) => !prevClicked);
     };
 
     const handleMouseEnter = () => {
@@ -35,8 +31,8 @@ const CarFilterCard = ({ imgAddress, carType, price, style }) => {
             )}
             <div
                 className="car-filter-card"
-                onClick={handleClick}
                 style={isClicked ? darkTheme : lightTheme}
+                onClick={handleClick}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >

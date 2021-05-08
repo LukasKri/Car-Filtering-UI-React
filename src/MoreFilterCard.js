@@ -1,6 +1,7 @@
 import React from "react";
 
-const MoreFilterCard = ({ imgAddress, carType, price }) => {
+const MoreFilterCard = (props) => {
+    const { imgAddress, carType, price } = props;
     return (
         <>
             <div className="m-f-content" role="dialog">

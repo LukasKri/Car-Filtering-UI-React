@@ -1,11 +1,38 @@
+import { useState } from "react";
 import CarFilterCard from "./CarFilterCard";
 import Header from "./Header";
 import MoreFilter from "./MoreFilter";
 
 function App() {
+    const [isSmallClicked, setIsSmallClicked] = useState(false);
+    const [isMediumClicked, setIsMediumClicked] = useState(false);
+    const [isLargeClicked, setIsLargeClicked] = useState(false);
+    const [isSUVClicked, setIsSUVClicked] = useState(false);
+    const [isVANClicked, setIsVANClicked] = useState(false);
+
+    const handleSmallClick = () => {
+        setIsSmallClicked((prevClicked) => !prevClicked);
+    };
+
+    const handleMediumClick = () => {
+        setIsMediumClicked((prevClicked) => !prevClicked);
+    };
+
+    const handleLargeClick = () => {
+        setIsLargeClicked((prevClicked) => !prevClicked);
+    };
+
+    const handleSUVClick = () => {
+        setIsSUVClicked((prevClicked) => !prevClicked);
+    };
+
+    const handleVANClick = () => {
+        setIsVANClicked((prevClicked) => !prevClicked);
+    };
+
     return (
         <div className="App">
-            <Header />
+            <Header isSmallClicked={isSmallClicked} />
             <div className="car-filter-cards">
                 <CarFilterCard
                     imgAddress={
@@ -14,6 +41,8 @@ function App() {
                     carType={"Small"}
                     price={"$233+"}
                     style={{ left: "38px" }}
+                    isClicked={isSmallClicked}
+                    handleClick={handleSmallClick}
                 />
                 <CarFilterCard
                     imgAddress={
@@ -22,6 +51,8 @@ function App() {
                     carType={"Medium"}
                     price={"$279+"}
                     style={{ left: "135px" }}
+                    isClicked={isMediumClicked}
+                    handleClick={handleMediumClick}
                 />
                 <CarFilterCard
                     imgAddress={
@@ -30,6 +61,8 @@ function App() {
                     carType={"Large"}
                     price={"$279+"}
                     style={{ left: "232px" }}
+                    isClicked={isLargeClicked}
+                    handleClick={handleLargeClick}
                 />
                 <CarFilterCard
                     imgAddress={
@@ -38,6 +71,8 @@ function App() {
                     carType={"SUV"}
                     price={"$383+"}
                     style={{ left: "329px" }}
+                    isClicked={isSUVClicked}
+                    handleClick={handleSUVClick}
                 />
                 <CarFilterCard
                     imgAddress={
@@ -46,6 +81,8 @@ function App() {
                     carType={"VAN"}
                     price={"$364+"}
                     style={{ left: "426px" }}
+                    isClicked={isVANClicked}
+                    handleClick={handleVANClick}
                 />
                 <MoreFilter />
             </div>
