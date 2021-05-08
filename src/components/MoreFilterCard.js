@@ -9,11 +9,6 @@ const MoreFilterCard = (props) => {
         handleCheckboxClick,
     } = props;
 
-    // const handleCheckboxClick = () => {
-    //     console.log("Checkbox clicked");
-    //     setIsChecked((prevClicked) => !prevClicked);
-    // };
-
     return (
         <>
             <div className="m-f-content" role="dialog">

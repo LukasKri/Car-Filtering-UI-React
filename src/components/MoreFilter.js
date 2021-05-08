@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import MoreFilterCard from "./MoreFilterCard";
 
-const MoreFilter = () => {
+const MoreFilter = (props) => {
+    const {
+        isLuxuryChecked,
+        handleLuxuryClick,
+        isConvertibleChecked,
+        handleConvertibleClick,
+        isCommercialChecked,
+        handleCommercialClick,
+        isPickupTruckChecked,
+        handlePickupTruckClick,
+    } = props;
     const [isMoreFilterClicked, setIsMoreFilterClicked] = useState(false);
-    const [isLuxuryChecked, setIsLuxuryChecked] = useState(false);
-    const [isConvertibleChecked, setIsConvertibleChecked] = useState(false);
-    const [isCommercialChecked, setIsCommercialChecked] = useState(false);
-    const [isPickupTruckChecked, setIsPickupTruckChecked] = useState(false);
 
     const darkTheme = {
         background: "#2c3439",
@@ -21,25 +27,6 @@ const MoreFilter = () => {
     const handleMoreFilterClick = (e) => {
         console.log("More filter was clicked.");
         setIsMoreFilterClicked((prevClicked) => !prevClicked);
-    };
-
-    const handleLuxuryClick = () => {
-        setIsLuxuryChecked((prevClicked) => !prevClicked);
-    };
-
-    const handleConvertibleClick = () => {
-        // console.log("Convertible checkbox clicked");
-        setIsConvertibleChecked((prevClicked) => !prevClicked);
-    };
-
-    const handleCommercialClick = () => {
-        // console.log("Commercial checkbox clicked");
-        setIsCommercialChecked((prevClicked) => !prevClicked);
-    };
-
-    const handlePickupTruckClick = () => {
-        // console.log("Pickup Truck checkbox clicked");
-        setIsPickupTruckChecked((prevClicked) => !prevClicked);
     };
 
     // const handleManyChecks = () => {

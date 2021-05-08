@@ -9,6 +9,10 @@ function App() {
     const [isLargeClicked, setIsLargeClicked] = useState(false);
     const [isSUVClicked, setIsSUVClicked] = useState(false);
     const [isVANClicked, setIsVANClicked] = useState(false);
+    const [isLuxuryChecked, setIsLuxuryChecked] = useState(false);
+    const [isConvertibleChecked, setIsConvertibleChecked] = useState(false);
+    const [isCommercialChecked, setIsCommercialChecked] = useState(false);
+    const [isPickupTruckChecked, setIsPickupTruckChecked] = useState(false);
 
     const handleSmallClick = () => {
         setIsSmallClicked((prevClicked) => !prevClicked);
@@ -30,6 +34,25 @@ function App() {
         setIsVANClicked((prevClicked) => !prevClicked);
     };
 
+    const handleLuxuryClick = () => {
+        setIsLuxuryChecked((prevClicked) => !prevClicked);
+    };
+
+    const handleConvertibleClick = () => {
+        // console.log("Convertible checkbox clicked");
+        setIsConvertibleChecked((prevClicked) => !prevClicked);
+    };
+
+    const handleCommercialClick = () => {
+        // console.log("Commercial checkbox clicked");
+        setIsCommercialChecked((prevClicked) => !prevClicked);
+    };
+
+    const handlePickupTruckClick = () => {
+        // console.log("Pickup Truck checkbox clicked");
+        setIsPickupTruckChecked((prevClicked) => !prevClicked);
+    };
+
     return (
         <div className="App">
             <Header
@@ -43,6 +66,14 @@ function App() {
                 setIsSUVClicked={setIsSUVClicked}
                 isVANClicked={isVANClicked}
                 setIsVANClicked={setIsVANClicked}
+                isLuxuryChecked={isLuxuryChecked}
+                setIsLuxuryChecked={setIsLuxuryChecked}
+                isConvertibleChecked={isConvertibleChecked}
+                setIsConvertibleChecked={setIsConvertibleChecked}
+                isCommercialChecked={isCommercialChecked}
+                setIsCommercialChecked={setIsCommercialChecked}
+                isPickupTruckChecked={isPickupTruckChecked}
+                setIsPickupTruckChecked={setIsPickupTruckChecked}
             />
             <div className="car-filter-cards">
                 <CarFilterCard
@@ -95,7 +126,16 @@ function App() {
                     isClicked={isVANClicked}
                     handleClick={handleVANClick}
                 />
-                <MoreFilter />
+                <MoreFilter
+                    isLuxuryChecked={isLuxuryChecked}
+                    handleLuxuryClick={handleLuxuryClick}
+                    isConvertibleChecked={isConvertibleChecked}
+                    handleConvertibleClick={handleConvertibleClick}
+                    isCommercialChecked={isCommercialChecked}
+                    handleCommercialClick={handleCommercialClick}
+                    isPickupTruckChecked={isPickupTruckChecked}
+                    handlePickupTruckClick={handlePickupTruckClick}
+                />
             </div>
         </div>
     );

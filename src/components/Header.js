@@ -12,6 +12,14 @@ const Header = (props) => {
         setIsSUVClicked,
         isVANClicked,
         setIsVANClicked,
+        isLuxuryChecked,
+        setIsLuxuryChecked,
+        isConvertibleChecked,
+        setIsConvertibleChecked,
+        isCommercialChecked,
+        setIsCommercialChecked,
+        isPickupTruckChecked,
+        setIsPickupTruckChecked,
     } = props;
 
     const handleResetClick = () => {
@@ -21,6 +29,10 @@ const Header = (props) => {
         setIsLargeClicked(false);
         setIsSUVClicked(false);
         setIsVANClicked(false);
+        setIsLuxuryChecked(false);
+        setIsConvertibleChecked(false);
+        setIsCommercialChecked(false);
+        setIsPickupTruckChecked(false);
     };
 
     return (
@@ -30,7 +42,11 @@ const Header = (props) => {
                 isMediumClicked ||
                 isLargeClicked ||
                 isSUVClicked ||
-                isVANClicked) && (
+                isVANClicked ||
+                isLuxuryChecked ||
+                isConvertibleChecked ||
+                isCommercialChecked ||
+                isPickupTruckChecked) && (
                 <div
                     role="button"
                     className="header-reset"
