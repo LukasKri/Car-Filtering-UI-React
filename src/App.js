@@ -53,7 +53,7 @@ function App() {
         setIsPickupTruckClicked((prevClicked) => !prevClicked);
     };
 
-    const handleMoreFilterClick = (e) => {
+    const handleMoreFilterClick = () => {
         setIsMoreFilterClicked((prevClicked) => !prevClicked);
     };
 
