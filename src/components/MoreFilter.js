@@ -27,28 +27,33 @@ const MoreFilter = (props) => {
         lightTheme,
     } = props;
 
-    const useOutsideAlerter = (ref) => {
-        useEffect(() => {
-            function handleClickOutside(event) {
-                if (ref.current && !ref.current.contains(event.target)) {
-                    setIsMoreFilterClicked(false);
-                }
+    const node = useRef();
+
+    // useEffect hook closes the dropdown on outside click.
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            if (node.current && node.current.contains(e.target)) {
+                // Inside click.
+                return;
             }
+            // Outside click.
+            setIsMoreFilterClicked(false);
+        };
 
-            // Bind the event listener
+        // Bind the event listener.
+        if (isMoreFilterClicked) {
             document.addEventListener("click", handleClickOutside);
-            return () => {
-                // Unbind the event listener on clean up
-                document.removeEventListener("click", handleClickOutside);
-            };
-        }, [ref]);
-    };
-
-    const wrapperRef = useRef(null);
-    useOutsideAlerter(wrapperRef);
+        } else {
+            document.removeEventListener("click", handleClickOutside);
+        }
+        return () => {
+            // Unbind the event listener on clean up.
+            document.removeEventListener("click", handleClickOutside);
+        };
+    }, [isMoreFilterClicked, setIsMoreFilterClicked]);
 
     return (
-        <div ref={wrapperRef}>
+        <div ref={node}>
             <div
                 role="button"
                 className="more-filter-button-card"

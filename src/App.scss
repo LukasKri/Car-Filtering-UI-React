@@ -3,6 +3,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.app {
+    display: flex;
+}
+
 .car-filter-cards {
     display: flex;
     margin-left: 20px;

@@ -2,13 +2,8 @@ import React from "react";
 import "./MoreFilterCard.scss";
 
 const MoreFilterCard = (props) => {
-    const {
-        imgAddress,
-        carType,
-        price,
-        isChecked,
-        handleCheckboxClick,
-    } = props;
+    const { imgAddress, carType, price, isChecked, handleCheckboxClick } =
+        props;
 
     return (
         <>
@@ -23,10 +18,10 @@ const MoreFilterCard = (props) => {
                             className="m-f-input"
                             type="checkbox"
                             checked={isChecked}
-                            /* this may not be the best way to disable the
+                            /* This may not be the best way to disable the
                             console warning, which arise because I'm using
                             onCilck event handler on the whole div element
-                            and not onChange on the input element */
+                            and not onChange on the input element directly. */
                             onChange={() => {}}
                         />
                         <div className="m-f-img-car-type">

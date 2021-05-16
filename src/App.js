@@ -69,109 +69,113 @@ function App() {
     };
 
     return (
-        <div className="App">
-            <Header
-                isSmallClicked={isSmallClicked}
-                setIsSmallClicked={setIsSmallClicked}
-                isMediumClicked={isMediumClicked}
-                setIsMediumClicked={setIsMediumClicked}
-                isLargeClicked={isLargeClicked}
-                setIsLargeClicked={setIsLargeClicked}
-                isSUVClicked={isSUVClicked}
-                setIsSUVClicked={setIsSUVClicked}
-                isVanClicked={isVanClicked}
-                setIsVanClicked={setIsVanClicked}
-                isLuxuryClicked={isLuxuryClicked}
-                setIsLuxuryClicked={setIsLuxuryClicked}
-                isConvertibleClicked={isConvertibleClicked}
-                setIsConvertibleClicked={setIsConvertibleClicked}
-                isCommercialClicked={isCommercialClicked}
-                setIsCommercialClicked={setIsCommercialClicked}
-                isPickupTruckClicked={isPickupTruckClicked}
-                setIsPickupTruckClicked={setIsPickupTruckClicked}
-                setIsMoreFilterClicked={setIsMoreFilterClicked}
-            />
-            <div className="car-filter-cards">
-                <CarFilterCard
-                    imgAddress={
-                        "https://content.r9cdn.net/rimg/carimages/generic/01_mini_white.png?width=108&height=72"
-                    }
-                    carType={"Small"}
-                    price={"$233+"}
-                    style={{ left: "36px" }}
-                    isClicked={isSmallClicked}
-                    handleClick={handleSmallClick}
-                    darkTheme={darkTheme}
-                    lightTheme={lightTheme}
-                />
-                <CarFilterCard
-                    imgAddress={
-                        "https://content.r9cdn.net/rimg/carimages/generic/02_economy_white.png?width=108&height=72"
-                    }
-                    carType={"Medium"}
-                    price={"$279+"}
-                    style={{ left: "128px" }}
-                    isClicked={isMediumClicked}
-                    handleClick={handleMediumClick}
-                    darkTheme={darkTheme}
-                    lightTheme={lightTheme}
-                />
-                <CarFilterCard
-                    imgAddress={
-                        "https://content.r9cdn.net/rimg/carimages/generic/03_standard_white.png?width=108&height=72"
-                    }
-                    carType={"Large"}
-                    price={"$279+"}
-                    style={{ left: "220px" }}
-                    isClicked={isLargeClicked}
-                    handleClick={handleLargeClick}
-                    darkTheme={darkTheme}
-                    lightTheme={lightTheme}
-                />
-                <CarFilterCard
-                    imgAddress={
-                        "https://content.r9cdn.net/rimg/carimages/generic/05_suv-small_white.png?width=108&height=72"
-                    }
-                    carType={"SUV"}
-                    price={"$383+"}
-                    style={{ left: "312px" }}
-                    isClicked={isSUVClicked}
-                    handleClick={handleSUVClick}
-                    darkTheme={darkTheme}
-                    lightTheme={lightTheme}
-                />
-                <CarFilterCard
-                    imgAddress={
-                        "https://content.r9cdn.net/rimg/carimages/generic/11_van_white.png?width=108&height=72"
-                    }
-                    carType={"Van"}
-                    price={"$364+"}
-                    style={{ left: "404px" }}
-                    isClicked={isVanClicked}
-                    handleClick={handleVanClick}
-                    darkTheme={darkTheme}
-                    lightTheme={lightTheme}
-                />
-                <MoreFilter
+        <div className="app">
+            <div className="inside-app">
+                <Header
+                    isSmallClicked={isSmallClicked}
+                    setIsSmallClicked={setIsSmallClicked}
+                    isMediumClicked={isMediumClicked}
+                    setIsMediumClicked={setIsMediumClicked}
+                    isLargeClicked={isLargeClicked}
+                    setIsLargeClicked={setIsLargeClicked}
+                    isSUVClicked={isSUVClicked}
+                    setIsSUVClicked={setIsSUVClicked}
+                    isVanClicked={isVanClicked}
+                    setIsVanClicked={setIsVanClicked}
                     isLuxuryClicked={isLuxuryClicked}
                     setIsLuxuryClicked={setIsLuxuryClicked}
-                    handleLuxuryClick={handleLuxuryClick}
                     isConvertibleClicked={isConvertibleClicked}
                     setIsConvertibleClicked={setIsConvertibleClicked}
-                    handleConvertibleClick={handleConvertibleClick}
                     isCommercialClicked={isCommercialClicked}
                     setIsCommercialClicked={setIsCommercialClicked}
-                    handleCommercialClick={handleCommercialClick}
                     isPickupTruckClicked={isPickupTruckClicked}
                     setIsPickupTruckClicked={setIsPickupTruckClicked}
-                    handlePickupTruckClick={handlePickupTruckClick}
-                    isMoreFilterClicked={isMoreFilterClicked}
                     setIsMoreFilterClicked={setIsMoreFilterClicked}
-                    handleMoreFilterClick={handleMoreFilterClick}
-                    darkTheme={darkTheme}
-                    lightTheme={lightTheme}
                 />
+                <div className="car-filter-cards">
+                    <CarFilterCard
+                        imgAddress={
+                            "https://content.r9cdn.net/rimg/carimages/generic/01_mini_white.png?width=108&height=72"
+                        }
+                        carType={"Small"}
+                        price={"$233+"}
+                        style={{ left: "36px" }}
+                        isClicked={isSmallClicked}
+                        handleClick={handleSmallClick}
+                        darkTheme={darkTheme}
+                        lightTheme={lightTheme}
+                    />
+                    <CarFilterCard
+                        imgAddress={
+                            "https://content.r9cdn.net/rimg/carimages/generic/02_economy_white.png?width=108&height=72"
+                        }
+                        carType={"Medium"}
+                        price={"$279+"}
+                        style={{ left: "128px" }}
+                        isClicked={isMediumClicked}
+                        handleClick={handleMediumClick}
+                        darkTheme={darkTheme}
+                        lightTheme={lightTheme}
+                    />
+                    <CarFilterCard
+                        imgAddress={
+                            "https://content.r9cdn.net/rimg/carimages/generic/03_standard_white.png?width=108&height=72"
+                        }
+                        carType={"Large"}
+                        price={"$279+"}
+                        style={{ left: "220px" }}
+                        isClicked={isLargeClicked}
+                        handleClick={handleLargeClick}
+                        darkTheme={darkTheme}
+                        lightTheme={lightTheme}
+                    />
+                    <CarFilterCard
+                        imgAddress={
+                            "https://content.r9cdn.net/rimg/carimages/generic/05_suv-small_white.png?width=108&height=72"
+                        }
+                        carType={"SUV"}
+                        price={"$383+"}
+                        style={{ left: "312px" }}
+                        isClicked={isSUVClicked}
+                        handleClick={handleSUVClick}
+                        darkTheme={darkTheme}
+                        lightTheme={lightTheme}
+                    />
+                    <CarFilterCard
+                        imgAddress={
+                            "https://content.r9cdn.net/rimg/carimages/generic/11_van_white.png?width=108&height=72"
+                        }
+                        carType={"Van"}
+                        price={"$364+"}
+                        style={{ left: "404px" }}
+                        isClicked={isVanClicked}
+                        handleClick={handleVanClick}
+                        darkTheme={darkTheme}
+                        lightTheme={lightTheme}
+                    />
+                    <MoreFilter
+                        isLuxuryClicked={isLuxuryClicked}
+                        setIsLuxuryClicked={setIsLuxuryClicked}
+                        handleLuxuryClick={handleLuxuryClick}
+                        isConvertibleClicked={isConvertibleClicked}
+                        setIsConvertibleClicked={setIsConvertibleClicked}
+                        handleConvertibleClick={handleConvertibleClick}
+                        isCommercialClicked={isCommercialClicked}
+                        setIsCommercialClicked={setIsCommercialClicked}
+                        handleCommercialClick={handleCommercialClick}
+                        isPickupTruckClicked={isPickupTruckClicked}
+                        setIsPickupTruckClicked={setIsPickupTruckClicked}
+                        handlePickupTruckClick={handlePickupTruckClick}
+                        isMoreFilterClicked={isMoreFilterClicked}
+                        setIsMoreFilterClicked={setIsMoreFilterClicked}
+                        handleMoreFilterClick={handleMoreFilterClick}
+                        darkTheme={darkTheme}
+                        lightTheme={lightTheme}
+                    />
+                </div>
             </div>
+            {/* This div below is just for styling purposes. */}
+            <div className="outside-app"></div>
         </div>
     );
 }
