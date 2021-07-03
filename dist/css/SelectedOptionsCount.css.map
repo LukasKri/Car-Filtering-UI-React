@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EACd,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG;EAChB,WAAW,EAAE,IAAI;CACpB",
+    "sources": [
+        "../../src/components/SelectedOptionsCount.scss"
+    ],
+    "names": [],
+    "file": "SelectedOptionsCount.css"
+}

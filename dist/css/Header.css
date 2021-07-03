@@ -1,0 +1,26 @@
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  margin: 50px 0 8px 20px;
+}
+
+.header-name {
+  color: #212a30;
+  display: block;
+  font-size: 16px;
+}
+
+.header-reset {
+  color: #0080a4;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+}
+/*# sourceMappingURL=Header.css.map */
