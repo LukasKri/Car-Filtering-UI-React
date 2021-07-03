@@ -10,11 +10,11 @@
     cursor: pointer;
     font-size: 12px;
     font-weight: 700;
-    height: 60px;
+    height: 102px;
     line-height: 18px;
     margin-right: 0;
     margin-bottom: 16px;
-    min-width: 75px;
+    min-width: 100px;
     padding: 4px 12px;
     position: relative;
     transition: color 0.2s ease-out, background-color 0.2s ease-out;
@@ -25,16 +25,18 @@
 }
 
 .more-filter-title {
-    padding-right: 8px;
+    line-height: 16px;
+    font-size: 14px;
+    padding: 4px;
 }
 
 .more-filter-cards-outer {
     border-radius: 8px;
     box-shadow: 0 3px 5px rgba(25, 32, 36, 0.16);
-    left: 488px;
+    left: 568px;
     position: absolute;
-    top: 135px;
-    width: 250px;
+    top: 186px;
+    width: 280px;
 }
 
 .more-filter-cards-inner {

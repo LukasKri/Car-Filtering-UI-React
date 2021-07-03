@@ -1,53 +1,52 @@
 .price-tooltip {
+    position: absolute;
+    top: 19px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 71px;
+    height: 51px;
+    color: #f9fafb;
     background: #1f282d;
     border-radius: 4px;
-    color: #f9fafb;
-    height: 51px;
-    position: absolute;
-    top: 19px;
-    width: 71px;
 
     &::before {
+        position: absolute;
+        bottom: -9px;
         content: "";
         display: block;
-        background: #1f282d;
-        bottom: -9px;
+        width: 18px;
         height: 18px;
-        position: absolute;
+        background: #1f282d;
         transform: rotate(45deg);
         transform-origin: center;
-        width: 18px;
     }
 }
 
 .price-tag {
-    background: #1f282d;
     color: #f9fafb;
     fill: #f9fafb;
+    background: #1f282d;
     font-size: 14px;
     font-weight: 400;
 }
 
 .car-filter-card {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
+    min-width: 100px;
+    height: 100px;
+    margin: 0px 6px 16px 0px;
+    color: #192024;
     background: #ffffff;
     border: 1px solid #9ba8b0;
     border-radius: 4px;
-    color: #192024;
     cursor: pointer;
     font-size: 12px;
     font-weight: 700;
-    height: 50px;
     line-height: 18px;
-    padding: 4px 8px;
-    margin: 0px 4px 16px 0px;
-    min-width: 70px;
     transition: color 0.2s ease-out, background-color 0.2s ease-out;
 
     &:hover {
@@ -56,6 +55,12 @@
 }
 
 .car-img {
-    height: 32px;
-    width: 48px;
+    width: 78px;
+    height: 50px;
+}
+
+.car-type {
+    padding: 4px;
+    font-size: 14px;
+    line-height: 16px;
 }

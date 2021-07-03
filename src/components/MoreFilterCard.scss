@@ -1,9 +1,9 @@
 .m-f-content {
     display: block;
-    cursor: pointer;
-    line-height: 20px;
     margin: 0 -16px;
     padding: 5px 16px;
+    cursor: pointer;
+    line-height: 20px;
 
     &:hover {
         background-color: #f3f5f7;
@@ -26,8 +26,8 @@
 
 .m-f-img-car-type {
     display: flex;
-    align-items: center;
     align-content: space-between;
+    align-items: center;
     color: #2b2b2b;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .m-f-price-tag {
+    margin-left: 3px;
     color: #647582;
     font-size: 0.8rem;
-    margin-left: 3px;
 }

@@ -37,12 +37,12 @@ const CarFilterCard = (props) => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
+                <div className="car-type">{carType}</div>
                 <img
                     className="car-img"
                     src={imgAddress}
                     alt={`${carType}-car-type-img`}
                 />
-                <div className="car-type">{carType}</div>
             </div>
         </>
     );

@@ -97,9 +97,9 @@ function App() {
                         imgAddress={
                             "https://content.r9cdn.net/rimg/carimages/generic/01_mini_white.png?width=108&height=72"
                         }
-                        carType={"Small"}
+                        carType={"Small cars"}
                         price={"$233+"}
-                        style={{ left: "36px" }}
+                        style={{ left: "43px" }}
                         isClicked={isSmallClicked}
                         handleClick={handleSmallClick}
                         darkTheme={darkTheme}
@@ -109,9 +109,9 @@ function App() {
                         imgAddress={
                             "https://content.r9cdn.net/rimg/carimages/generic/02_economy_white.png?width=108&height=72"
                         }
-                        carType={"Medium"}
+                        carType={"Medium cars"}
                         price={"$279+"}
-                        style={{ left: "128px" }}
+                        style={{ left: "152px" }}
                         isClicked={isMediumClicked}
                         handleClick={handleMediumClick}
                         darkTheme={darkTheme}
@@ -121,9 +121,9 @@ function App() {
                         imgAddress={
                             "https://content.r9cdn.net/rimg/carimages/generic/03_standard_white.png?width=108&height=72"
                         }
-                        carType={"Large"}
+                        carType={"Large cars"}
                         price={"$279+"}
-                        style={{ left: "220px" }}
+                        style={{ left: "260px" }}
                         isClicked={isLargeClicked}
                         handleClick={handleLargeClick}
                         darkTheme={darkTheme}
@@ -133,9 +133,9 @@ function App() {
                         imgAddress={
                             "https://content.r9cdn.net/rimg/carimages/generic/05_suv-small_white.png?width=108&height=72"
                         }
-                        carType={"SUV"}
+                        carType={"SUVs"}
                         price={"$383+"}
-                        style={{ left: "312px" }}
+                        style={{ left: "368px" }}
                         isClicked={isSUVClicked}
                         handleClick={handleSUVClick}
                         darkTheme={darkTheme}
@@ -145,9 +145,9 @@ function App() {
                         imgAddress={
                             "https://content.r9cdn.net/rimg/carimages/generic/11_van_white.png?width=108&height=72"
                         }
-                        carType={"Van"}
+                        carType={"Vans"}
                         price={"$364+"}
-                        style={{ left: "404px" }}
+                        style={{ left: "476px" }}
                         isClicked={isVanClicked}
                         handleClick={handleVanClick}
                         darkTheme={darkTheme}
