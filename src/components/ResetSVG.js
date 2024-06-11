@@ -3,23 +3,11 @@ import "./ResetSVG.scss";
 
 const ResetSVG = (props) => {
     const {
-        setIsLuxuryClicked,
-        setIsConvertibleClicked,
-        setIsCommercialClicked,
-        setIsPickupTruckClicked,
-        setIsMoreFilterClicked,
+        handleSVGResetClick
     } = props;
 
-    const handleResetClick = () => {
-        setIsLuxuryClicked(false);
-        setIsConvertibleClicked(false);
-        setIsCommercialClicked(false);
-        setIsPickupTruckClicked(false);
-        setIsMoreFilterClicked(true);
-    };
-
     return (
-        <div role="button" onClick={handleResetClick}>
+        <div role="button" onClick={handleSVGResetClick}>
             <svg
                 className="svg-image"
                 role="img"

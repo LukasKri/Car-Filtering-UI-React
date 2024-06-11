@@ -5,38 +5,16 @@ import "./Header.scss";
 const Header = (props) => {
     const {
         isSmallClicked,
-        setIsSmallClicked,
         isMediumClicked,
-        setIsMediumClicked,
         isLargeClicked,
-        setIsLargeClicked,
         isSUVClicked,
-        setIsSUVClicked,
         isVanClicked,
-        setIsVanClicked,
         isLuxuryClicked,
-        setIsLuxuryClicked,
         isConvertibleClicked,
-        setIsConvertibleClicked,
         isCommercialClicked,
-        setIsCommercialClicked,
         isPickupTruckClicked,
-        setIsPickupTruckClicked,
-        setIsMoreFilterClicked,
+        handleMainResetClick,
     } = props;
-
-    const handleResetClick = () => {
-        setIsSmallClicked(false);
-        setIsMediumClicked(false);
-        setIsLargeClicked(false);
-        setIsSUVClicked(false);
-        setIsVanClicked(false);
-        setIsLuxuryClicked(false);
-        setIsConvertibleClicked(false);
-        setIsCommercialClicked(false);
-        setIsPickupTruckClicked(false);
-        setIsMoreFilterClicked(false);
-    };
 
     return (
         <div className="header">
@@ -53,7 +31,7 @@ const Header = (props) => {
                 <div
                     role="button"
                     className="header-reset"
-                    onClick={handleResetClick}
+                    onClick={handleMainResetClick}
                 >
                     Reset
                 </div>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { handleClick } from "./helpers/handleClick"
 import "./App.scss";
 
 import CarFilterCard from "./components/CarFilterCard";
@@ -17,44 +18,36 @@ function App() {
     const [isPickupTruckClicked, setIsPickupTruckClicked] = useState(false);
     const [isMoreFilterClicked, setIsMoreFilterClicked] = useState(false);
 
-    const handleSmallClick = () => {
-        setIsSmallClicked((prevClicked) => !prevClicked);
+    const handleSmallClick = handleClick(setIsSmallClicked);
+    const handleMediumClick = handleClick(setIsMediumClicked);
+    const handleLargeClick = handleClick(setIsLargeClicked);
+    const handleSUVClick = handleClick(setIsSUVClicked);
+    const handleVanClick = handleClick(setIsVanClicked);
+    const handleLuxuryClick = handleClick(setIsLuxuryClicked);
+    const handleConvertibleClick = handleClick(setIsConvertibleClicked);
+    const handleCommercialClick = handleClick(setIsCommercialClicked);
+    const handlePickupTruckClick = handleClick(setIsPickupTruckClicked);
+    const handleMoreFilterClick = handleClick(setIsMoreFilterClicked);
+
+    const handleMainResetClick = () => {
+        setIsSmallClicked(false);
+        setIsMediumClicked(false);
+        setIsLargeClicked(false);
+        setIsSUVClicked(false);
+        setIsVanClicked(false);
+        setIsLuxuryClicked(false);
+        setIsConvertibleClicked(false);
+        setIsCommercialClicked(false);
+        setIsPickupTruckClicked(false);
+        setIsMoreFilterClicked(false);
     };
 
-    const handleMediumClick = () => {
-        setIsMediumClicked((prevClicked) => !prevClicked);
-    };
-
-    const handleLargeClick = () => {
-        setIsLargeClicked((prevClicked) => !prevClicked);
-    };
-
-    const handleSUVClick = () => {
-        setIsSUVClicked((prevClicked) => !prevClicked);
-    };
-
-    const handleVanClick = () => {
-        setIsVanClicked((prevClicked) => !prevClicked);
-    };
-
-    const handleLuxuryClick = () => {
-        setIsLuxuryClicked((prevClicked) => !prevClicked);
-    };
-
-    const handleConvertibleClick = () => {
-        setIsConvertibleClicked((prevClicked) => !prevClicked);
-    };
-
-    const handleCommercialClick = () => {
-        setIsCommercialClicked((prevClicked) => !prevClicked);
-    };
-
-    const handlePickupTruckClick = () => {
-        setIsPickupTruckClicked((prevClicked) => !prevClicked);
-    };
-
-    const handleMoreFilterClick = () => {
-        setIsMoreFilterClicked((prevClicked) => !prevClicked);
+    const handleSVGResetClick = () => {
+        setIsLuxuryClicked(false);
+        setIsConvertibleClicked(false);
+        setIsCommercialClicked(false);
+        setIsPickupTruckClicked(false);
+        setIsMoreFilterClicked(true);
     };
 
     const darkTheme = {
@@ -73,24 +66,15 @@ function App() {
             <div className="inside-app">
                 <Header
                     isSmallClicked={isSmallClicked}
-                    setIsSmallClicked={setIsSmallClicked}
                     isMediumClicked={isMediumClicked}
-                    setIsMediumClicked={setIsMediumClicked}
                     isLargeClicked={isLargeClicked}
-                    setIsLargeClicked={setIsLargeClicked}
                     isSUVClicked={isSUVClicked}
-                    setIsSUVClicked={setIsSUVClicked}
                     isVanClicked={isVanClicked}
-                    setIsVanClicked={setIsVanClicked}
                     isLuxuryClicked={isLuxuryClicked}
-                    setIsLuxuryClicked={setIsLuxuryClicked}
                     isConvertibleClicked={isConvertibleClicked}
-                    setIsConvertibleClicked={setIsConvertibleClicked}
                     isCommercialClicked={isCommercialClicked}
-                    setIsCommercialClicked={setIsCommercialClicked}
                     isPickupTruckClicked={isPickupTruckClicked}
-                    setIsPickupTruckClicked={setIsPickupTruckClicked}
-                    setIsMoreFilterClicked={setIsMoreFilterClicked}
+                    handleMainResetClick={handleMainResetClick}
                 />
                 <div className="car-filter-cards">
                     <CarFilterCard
@@ -155,20 +139,17 @@ function App() {
                     />
                     <MoreFilter
                         isLuxuryClicked={isLuxuryClicked}
-                        setIsLuxuryClicked={setIsLuxuryClicked}
                         handleLuxuryClick={handleLuxuryClick}
                         isConvertibleClicked={isConvertibleClicked}
-                        setIsConvertibleClicked={setIsConvertibleClicked}
                         handleConvertibleClick={handleConvertibleClick}
                         isCommercialClicked={isCommercialClicked}
-                        setIsCommercialClicked={setIsCommercialClicked}
                         handleCommercialClick={handleCommercialClick}
                         isPickupTruckClicked={isPickupTruckClicked}
-                        setIsPickupTruckClicked={setIsPickupTruckClicked}
                         handlePickupTruckClick={handlePickupTruckClick}
                         isMoreFilterClicked={isMoreFilterClicked}
                         setIsMoreFilterClicked={setIsMoreFilterClicked}
                         handleMoreFilterClick={handleMoreFilterClick}
+                        handleSVGResetClick={handleSVGResetClick}
                         darkTheme={darkTheme}
                         lightTheme={lightTheme}
                     />

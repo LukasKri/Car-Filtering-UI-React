@@ -9,20 +9,17 @@ import SelectedOptionsCount from "./SelectedOptionsCount";
 const MoreFilter = (props) => {
     const {
         isLuxuryClicked,
-        setIsLuxuryClicked,
         handleLuxuryClick,
         isConvertibleClicked,
-        setIsConvertibleClicked,
         handleConvertibleClick,
         isCommercialClicked,
-        setIsCommercialClicked,
         handleCommercialClick,
         isPickupTruckClicked,
-        setIsPickupTruckClicked,
         handlePickupTruckClick,
         isMoreFilterClicked,
         setIsMoreFilterClicked,
         handleMoreFilterClick,
+        handleSVGResetClick,
         darkTheme,
         lightTheme,
     } = props;
@@ -87,11 +84,7 @@ const MoreFilter = (props) => {
                 isCommercialClicked ||
                 isPickupTruckClicked ? (
                     <ResetSVG
-                        setIsLuxuryClicked={setIsLuxuryClicked}
-                        setIsConvertibleClicked={setIsConvertibleClicked}
-                        setIsCommercialClicked={setIsCommercialClicked}
-                        setIsPickupTruckClicked={setIsPickupTruckClicked}
-                        setIsMoreFilterClicked={setIsMoreFilterClicked}
+                        handleSVGResetClick={handleSVGResetClick}
                     />
                 ) : (
                     <DropdownSVG isMoreFilterClicked={isMoreFilterClicked} />
