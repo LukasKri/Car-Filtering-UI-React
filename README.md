@@ -39,8 +39,8 @@ To open and launch the project do the following steps:
 
 ## Gained knowledge
 * Knowledge in React:
-  * Props psassing and rendering
-  * useState, useEffect and useRef hooks and events handling
+  * Props passing and rendering
+  * useState, useEffect and useRef hooks + events handling
   * JavaScript embedding in JSX and conditional rendering
   * Creation of reusable components
 * Adding and using Sass in the React project
