@@ -1,18 +1,10 @@
 import React from "react";
 import "./SelectedOptionsCount.scss";
 
-const SelectedOptionsCount = ({
-  isLuxuryClicked,
-  isConvertibleClicked,
-  isCommercialClicked,
-  isPickupTruckClicked,
-}) => {
-  const options = [
-    { name: "Luxury", clicked: isLuxuryClicked },
-    { name: "Convertible", clicked: isConvertibleClicked },
-    { name: "Commercial", clicked: isCommercialClicked },
-    { name: "Pickup Truck", clicked: isPickupTruckClicked },
-  ];
+const SelectedOptionsCount = ({ clickedCarTypes, moreFilterCars }) => {
+  const options = moreFilterCars.map((car) => {
+    return { name: car.type, clicked: clickedCarTypes[car.key] };
+  });
 
   const selectedOptions = options.filter((option) => option.clicked);
   const count = selectedOptions.length;
