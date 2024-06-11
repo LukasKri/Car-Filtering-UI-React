@@ -1,4 +1,3 @@
-import React, { useRef, useEffect } from "react";
 import "./MoreFilter.scss";
 
 import DropdownSVG from "./DropdownSVG";
@@ -16,39 +15,13 @@ const MoreFilter = ({
   isPickupTruckClicked,
   handlePickupTruckClick,
   isMoreFilterClicked,
-  setIsMoreFilterClicked,
   handleMoreFilterClick,
   handleSVGResetClick,
   darkTheme,
   lightTheme,
 }) => {
-  const node = useRef();
-
-  // useEffect hook closes the dropdown on outside click.
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (node.current && node.current.contains(e.target)) {
-        // Inside click.
-        return;
-      }
-      // Outside click.
-      setIsMoreFilterClicked(false);
-    };
-
-    // Bind the event listener.
-    if (isMoreFilterClicked) {
-      document.addEventListener("click", handleClickOutside);
-    } else {
-      document.removeEventListener("click", handleClickOutside);
-    }
-    return () => {
-      // Unbind the event listener on clean up.
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, [isMoreFilterClicked, setIsMoreFilterClicked]);
-
   return (
-    <div ref={node}>
+    <div>
       <div
         role="button"
         className="more-filter-button-card"

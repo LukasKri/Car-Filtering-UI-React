@@ -17,11 +17,7 @@ const MoreFilterCard = ({
               className="m-f-input"
               type="checkbox"
               checked={isChecked}
-              /* This may not be the best way to disable the
-                            console warning, which arise because I'm using
-                            onCilck event handler on the whole div element
-                            and not onChange on the input element directly. */
-              onChange={() => {}}
+              readOnly
             />
             <div className="m-f-img-car-type">
               <div className="m-f-car-img">
