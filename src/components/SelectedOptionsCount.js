@@ -14,7 +14,6 @@ const SelectedOptionsCount = ({
     { name: "Pickup Truck", clicked: isPickupTruckClicked },
   ];
 
-  console.log("---- options: ", options);
   const selectedOptions = options.filter((option) => option.clicked);
   const count = selectedOptions.length;
 
