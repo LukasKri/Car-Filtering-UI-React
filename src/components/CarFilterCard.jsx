@@ -22,13 +22,14 @@ const CarFilterCard = ({
   };
 
   return (
-    <>
+    <div>
       {showPriceTooltip && (
         <div className="price-tooltip" style={style}>
           <div className="price-tag">{price}</div>
         </div>
       )}
       <div
+        role="button"
         className="car-filter-card"
         style={isClicked ? darkTheme : lightTheme}
         onClick={handleClick}
@@ -42,7 +43,7 @@ const CarFilterCard = ({
           alt={`${carType}-car-type-img`}
         />
       </div>
-    </>
+    </div>
   );
 };
 
