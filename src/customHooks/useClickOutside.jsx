@@ -9,6 +9,7 @@ export const useClickOutside = (ref, callback) => {
     }
 
     document.addEventListener("click", handleClickOutside);
+
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };

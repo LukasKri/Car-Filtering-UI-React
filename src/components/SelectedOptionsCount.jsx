@@ -11,9 +11,8 @@ const SelectedOptionsCount = ({ clickedCarTypes, moreFilterCars }) => {
 
   if (count > 1) {
     return <div className="selected-details">{count} selected</div>;
-  } else if (count === 1) {
-    return <div className="selected-details">{selectedOptions[0].name}</div>;
   }
+  return <div className="selected-details">{selectedOptions[0]?.name}</div>;
 };
 
 export default SelectedOptionsCount;

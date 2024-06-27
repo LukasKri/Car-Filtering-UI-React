@@ -139,8 +139,6 @@ function MainFilter() {
           />
         </div>
       </div>
-      {/* This div below is just for styling purposes. */}
-      <div className="outside-app"></div>
     </div>
   );
 }
